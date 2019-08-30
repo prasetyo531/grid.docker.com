@@ -73,7 +73,10 @@ public class homepage {
 
 	}
 
-	public void ClickMenuAddProduct(){
+	public void HoverClickMenuAddProduct(){
+
+		Actions act = new Actions(driver);
+		act.moveToElement(this.hoverAddProduct).perform();
 
 		asser.addproducttodisplay();
 
@@ -81,12 +84,14 @@ public class homepage {
 		act.moveToElement(this.addProduct).click().perform();
 	}
 
-	public void ClickMenuAddReview(){
+	public void HoverClickMenuAddReview(){
+
+		Actions act = new Actions(driver);
+		act.moveToElement(this.hoverAddProduct).perform();
 
 		asser.addproducttodisplay();
 
-		Actions act = new Actions(driver);
-		act.moveToElement(this.addReview).click().perform();
+		act.moveToElement(this.addProduct).click().perform();
 	}
 
 
