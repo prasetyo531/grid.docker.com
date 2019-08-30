@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class homepage {
 
-	private WebDriverWait driver;
+	private WebDriver driver;
 	private WebDriverWait wait;
 
 	//	@FindBy(how = How.CSS, using = "span[id='id_menuburger_home']")
@@ -51,11 +51,6 @@ public class homepage {
 
 		this.driver=driver;
 
-	}
-
-	public WebElement closeTooltip(){
-
-		return driver.findElement(tooltip);
 	}
 
 	public void Hamburger(){
