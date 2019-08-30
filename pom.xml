@@ -10,8 +10,8 @@
 
     <build>
     <!--  cek testng file  -->
-    <sourceDirectory>${basedir}/main/java/Controller</sourceDirectory>
-    <testSourceDirectory>${basedir}/test/java</testSourceDirectory>
+    <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
+    <testSourceDirectory>${basedir}/src/test/java</testSourceDirectory>
     <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>

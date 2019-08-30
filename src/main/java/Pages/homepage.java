@@ -1,20 +1,35 @@
 package Pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class homepage {
-	
-	public RemoteWebDriver driver=null;
 
-	//tooltip
-	By tooltip=By.cssSelector("i[class='jsx-696978944 icon-ic_close close'");
-	
-	// hamburger element
-	By hamburger=By.cssSelector("span[id='id_menuburger_home']");
-	By reviews=By.linkText("Reviews");
-	//
+	private WebDriverWait driver;
+	private WebDriverWait wait;
+
+	//	@FindBy(how = How.CSS, using = "span[id='id_menuburger_home']")
+	//	@CacheLookup
+	//	private WebElement hamburger;
+
+	@FindBy(className = "span[id='id_menuburger_home']")
+	@CacheLookup
+	private WebElement hamburger;
+
+	@FindBy(how = How.LINK_TEXT, using = "Reviews")
+	@CacheLookup
+	private WebElement reviews;
+
+	@FindBy(linkText = "Reviews")
+	@CacheLookup
+	private WebElement reviewss;
 	
 	By homepage=By.xpath("//*[@id='__next']/div/div/div[1]/a");
 	By footerBrand=By.linkText("Brands");
@@ -31,7 +46,7 @@ public class homepage {
 	By menuSkincare=By.cssSelector("#__next > div > div > div.jsx-746878661.gtmenu > div.jsx-746878661.gtmenu-menu-main > div.jsx-746878661.gtmenu-menu-left > div > div > div:nth-child(3) > a");
 	By findaddreview=By.cssSelector("#__next > div > div > div.jsx-1787593642.home-content > div.jsx-1787593642.home-column.margin-bottom-30 > div.jsx-1787593642.home-one-quarter > div.jsx-1787593642.home-reviews-content > button");
 	
-	public homepage(RemoteWebDriver driver) {
+	public homepage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		
 		this.driver=driver;
@@ -43,16 +58,18 @@ public class homepage {
 		return driver.findElement(tooltip);
 	}
 	
-	public WebElement Hamburger(){
-		
-		return driver.findElement(hamburger);
+	public void Hamburger(){
+
+		this.wait.until(ExpectedConditions.elementToBeClickable(this.hamburger));
+		this.hamburger.click();
+
 	}
-	
+
 	public WebElement letmejoinletter(){
 		
 		return driver.findElement(joinletter);
 	}
-    //*[@id='__next']/div/div/div[1]/div/div[1]/div[1]/span
+
 	public WebElement letmejoinletter2(){
 		
 		return driver.findElement(joinletterReviewPage);

@@ -17,7 +17,7 @@ import java.util.logging.Level;
 
 public class BaseTest {
 
-    protected RemoteWebDriver driver;
+    protected WebDriver driver;
 
     @BeforeTest
     @Parameters({"browser"})

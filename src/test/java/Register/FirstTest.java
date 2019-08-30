@@ -15,6 +15,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertTrue;
 
@@ -36,7 +37,11 @@ public class FirstTest extends BaseTest {
         driver.get("https://femaledaily.com/");
         driver.manage().window().setSize(new Dimension(1650, 1200));
 
-        home.Hamburger().click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        asser.hamburgerMenu();
+
+        home.Hamburger();
 
         home.clickMenuReview().click();
 //		asser.waitNewestReview();

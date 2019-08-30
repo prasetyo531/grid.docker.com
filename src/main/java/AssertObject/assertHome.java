@@ -38,7 +38,7 @@ public class assertHome {
 	}
 	
 	public void hamburgerMenu(){
-		(new WebDriverWait(driver, 15)).until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("body > div:nth-child(7) > div > div.jsx-1757651050.new-menu > div.jsx-1757651050.new-menu-header")));
+		(new WebDriverWait(driver, 15)).until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span[id='id_menuburger_home']")));
 	}
 	
 	//confirmation modal add product
