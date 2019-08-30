@@ -41,19 +41,12 @@ public class FirstTest extends BaseTest {
 
         asser.hamburgerMenu();
 
-        home.Hamburger();
+        home.WaitHamburger();
 
-        home.clickMenuReview().click();
-//		asser.waitNewestReview();
+        home.ClickMenuReview();
 
-        WebElement getmenu = home.getAddProduct(); //xpath megamenu nya
-        Actions act = new Actions(driver);
-        act.moveToElement(getmenu).perform();
-
-        asser.addproducttodisplay();
-
-        WebElement clickElement= home.clickAddProduct(); //xpath sub megamenu nya
-        act.moveToElement(clickElement).click().perform();
+        home.HoverHeaderMenu();
+        home.ClickMenuAddProduct();
 
         Thread.sleep(3000);
 

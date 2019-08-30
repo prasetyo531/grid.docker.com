@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 75.386 s <<< FAILURE! - in TestSuite
+GOOGLE4(Register.SecondTest)  Time elapsed: 65.913 s  <<< FAILURE!
+java.lang.NullPointerException
+	at Register.SecondTest.GOOGLE4(SecondTest.java:46)
+
+GOOGLE1(Register.FirstTest)  Time elapsed: 68.765 s  <<< FAILURE!
+java.lang.NullPointerException
+	at Register.FirstTest.GOOGLE1(FirstTest.java:49)
+

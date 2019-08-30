@@ -8,8 +8,6 @@ import org.openqa.selenium.Cookie;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
@@ -37,21 +35,15 @@ public class SecondTest extends BaseTest {
         driver.manage().window().setSize(new Dimension(1650, 1200));
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
         asser.hamburgerMenu();
 
-        home.Hamburger();
+        home.WaitHamburger();
 
-        home.clickMenuReview().click();
-//		asser.waitNewestReview();
+        home.ClickMenuReview();
 
-        WebElement getmenu = home.getAddProduct(); //xpath megamenu nya
-        Actions act = new Actions(driver);
-        act.moveToElement(getmenu).perform();
-
-        asser.addproducttodisplay();
-
-        WebElement clickElement= home.clickAddProduct(); //xpath sub megamenu nya
-        act.moveToElement(clickElement).click().perform();
+        home.HoverHeaderMenu();
+        home.ClickMenuAddProduct();
 
         Thread.sleep(3000);
 

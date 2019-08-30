@@ -2,6 +2,7 @@ package AssertObject;
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,9 +15,9 @@ import static org.testng.Assert.assertTrue;
 
 public class assertHome {
 
-	public RemoteWebDriver driver= null;
+	public WebDriver driver= null;
 	
-	public assertHome(RemoteWebDriver driver) {
+	public assertHome(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		
 		this.driver=driver;    
@@ -38,7 +39,7 @@ public class assertHome {
 	}
 	
 	public void hamburgerMenu(){
-		(new WebDriverWait(driver, 15)).until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span[id='id_menuburger_home']")));
+		(new WebDriverWait(driver, 15)).until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[id='id-header']")));
 	}
 	
 	//confirmation modal add product

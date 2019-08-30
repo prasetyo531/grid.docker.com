@@ -1,12 +1,13 @@
 package Pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class login {
 	
-	public RemoteWebDriver driver=null;
+	public WebDriver driver=null;
 
 	By username=By.cssSelector("input[placeholder='Email / Username']");
 	By password=By.cssSelector("input[placeholder='Password']");
@@ -29,7 +30,7 @@ public class login {
 	
 	By clickfacebook=By.cssSelector("input[value='Login with Facebook']");
 	
-	public login(RemoteWebDriver driver) {
+	public login(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		
 		this.driver=driver;
