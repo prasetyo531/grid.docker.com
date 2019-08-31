@@ -45,8 +45,7 @@ public class FirstTest extends BaseTest {
 
         home.ClickMenuReview();
 
-        home.HoverHeaderMenu();
-        home.ClickMenuAddProduct();
+        home.HoverClickMenuAddProduct();
 
         Thread.sleep(3000);
 

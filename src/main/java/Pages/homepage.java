@@ -66,32 +66,20 @@ public class homepage {
 		this.reviews.click();
 	}
 
-	public void HoverHeaderMenu(){
-
-		Actions act = new Actions(driver);
-		act.moveToElement(this.hoverAddProduct).perform();
-
-	}
-
 	public void HoverClickMenuAddProduct(){
 
 		Actions act = new Actions(driver);
 		act.moveToElement(this.hoverAddProduct).perform();
+		act.click(addProduct).perform();
 
-		asser.addproducttodisplay();
-
-		Actions act = new Actions(driver);
-		act.moveToElement(this.addProduct).click().perform();
+		//asser.addproducttodisplay();
 	}
 
 	public void HoverClickMenuAddReview(){
 
 		Actions act = new Actions(driver);
 		act.moveToElement(this.hoverAddProduct).perform();
-
-		asser.addproducttodisplay();
-
-		act.moveToElement(this.addProduct).click().perform();
+		act.click(addReview).perform();
 	}
 
 

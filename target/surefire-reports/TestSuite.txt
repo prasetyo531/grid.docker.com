@@ -1,23 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 75.605 s <<< FAILURE! - in TestSuite
-GOOGLE1(Register.FirstTest)  Time elapsed: 37.476 s  <<< FAILURE!
-java.lang.NullPointerException
-	at Register.FirstTest.GOOGLE1(FirstTest.java:49)
-
-GOOGLE4(Register.SecondTest)  Time elapsed: 65.549 s  <<< FAILURE!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.linkText: Reviews' (tried for 30 second(s) with 500 milliseconds interval)
-	at Register.SecondTest.GOOGLE4(SecondTest.java:43)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"link text","selector":"Reviews"}
-  (Session info: chrome=76.0.3809.100)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
-System info: host: 'FDN-Prasetyos-MacBook-Pro.local', ip: 'fe80:0:0:0:14e3:1397:e32d:7d00%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.3', java.version: '11.0.4'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: /tmp/.com.google.Chrome.6LzOJw}, goog:chromeOptions: {debuggerAddress: localhost:42949}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 86578282939f4029bdfb1b40f2e...}
-Session ID: 86578282939f4029bdfb1b40f2ed46a3
-*** Element info: {Using=link text, value=Reviews}
-	at Register.SecondTest.GOOGLE4(SecondTest.java:43)
-
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 179.977 s - in TestSuite
