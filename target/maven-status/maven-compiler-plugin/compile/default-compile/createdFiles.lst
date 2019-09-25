@@ -1,6 +1,4 @@
 Pages/homepage.class
-Controller/optionsManager.class
-AssertObject/assertHome.class
-Controller/capabilityFactory.class
 Controller/baseTest.class
 Pages/login.class
+AssertObject/assertHome.class

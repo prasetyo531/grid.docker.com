@@ -29,10 +29,10 @@ public class baseTest {
         DesiredCapabilities dc;
 
         if (System.getProperty(browser) != null &&
-                System.getProperty(browser).equalsIgnoreCase("firefox")) {
-            dc = DesiredCapabilities.firefox();
-        } else {
+                System.getProperty(browser).equalsIgnoreCase("chrome")) {
             dc = DesiredCapabilities.chrome();
+        } else {
+            dc = DesiredCapabilities.firefox();
         }
 
         if (System.getProperty("HUB_HOST") != null) {
