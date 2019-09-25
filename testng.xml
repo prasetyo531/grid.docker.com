@@ -4,13 +4,13 @@
     <test name="Test-errorBeforeLogin">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="Register.FirstTest"/>
+            <class name="Register.firstTest"/>
         </classes>
     </test>
     <test name="Test-errorBeforeLoginDua">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="Register.SecondTest"/>
+            <class name="Register.secondTest"/>
         </classes>
     </test>
 </suite> <!-- Suite -->

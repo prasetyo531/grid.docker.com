@@ -1,13 +1,12 @@
 package Register;
 
 import AssertObject.assertHome;
-import Controller.BaseTest;
+import Controller.baseTest;
 import Pages.homepage;
 import Pages.login;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
@@ -17,15 +16,16 @@ import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertTrue;
 
-public class SecondTest extends BaseTest {
+public class firstTest extends baseTest {
 
     public static WebElement main = null;
     public static Properties prop = null;
 
     public String UrlLogin = null;
 
+
     @Test
-    public void GOOGLE4() throws InterruptedException {
+    public void GOOGLE1() throws InterruptedException {
 
         homepage home = new homepage(driver);
         login logpro = new login(driver);
@@ -53,6 +53,7 @@ public class SecondTest extends BaseTest {
         logpro.fillusername().sendKeys("dasdasdasdasd");
         logpro.fillpassword().sendKeys("sdasdasd");
         logpro.clickbuttonlogin().click();
+
     }
 
     @AfterMethod

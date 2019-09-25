@@ -4,13 +4,13 @@ import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestContext;
 
-public class CapabilityFactory {
+public class capabilityFactory {
 
     public Capabilities capabilities;
 
     public Capabilities getCapabilities (String browser, ITestContext ctx) {
         if (browser.equals("firefox")) {
-            capabilities = OptionsManager.getFirefoxOptions();
+            capabilities = optionsManager.getFirefoxOptions();
 
             DesiredCapabilities capabilitiesFirefox = new DesiredCapabilities();
             String tcname = ctx.getCurrentXmlTest().getName();
@@ -19,7 +19,7 @@ public class CapabilityFactory {
             return capabilities;
 
         } else if (browser.equals("chrome")) {
-            capabilities = OptionsManager.getChromeOptions();
+            capabilities = optionsManager.getChromeOptions();
 
             DesiredCapabilities capabilitiesChrome = new DesiredCapabilities();
             String tcname = ctx.getCurrentXmlTest().getName();
