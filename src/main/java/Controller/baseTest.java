@@ -20,16 +20,15 @@ public class baseTest {
     protected WebDriver driver;
 
     @BeforeTest
-    @Parameters({"browser"})
-    public void setupDriver(String browser, ITestContext ctx) throws MalformedURLException {
+    public void setupDriver(ITestContext ctx) throws MalformedURLException {
         // BROWSER => chrome / firefox
         // HUB_HOST => localhost / 10.0.1.3 / hostname
 
         String host = "localhost";
-        DesiredCapabilities dc;
+        DesiredCapabilities dc= DesiredCapabilities.chrome();
 
-        if (System.getProperty(browser) != null &&
-                System.getProperty(browser).equalsIgnoreCase("chrome")) {
+        if (System.getProperty("browser") != null &&
+                System.getProperty("browser").equalsIgnoreCase("chrome")) {
             dc = DesiredCapabilities.chrome();
         } else {
             dc = DesiredCapabilities.firefox();
