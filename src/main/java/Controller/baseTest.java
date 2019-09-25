@@ -34,8 +34,8 @@ public class baseTest {
             dc = DesiredCapabilities.firefox();
         }
 
-        if (System.getProperty("HUB_HOST") != null) {
-            host = System.getProperty("HUB_HOST");
+        if (System.getProperty("hub_host") != null) {
+            host = System.getProperty("hub_host");
         }
 
         String testName = ctx.getCurrentXmlTest().getName();
