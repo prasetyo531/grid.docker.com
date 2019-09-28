@@ -13,7 +13,7 @@ services:
     command: echo 0
     restart: "no" # ensures it does not get recreated
 
-  zalenium:
+  zaleniumgrid:
     image: dosel/zalenium
     container_name: zalenium
     depends_on:
@@ -21,6 +21,7 @@ services:
     hostname: myhost
     ports:
     - "4445:4445"
+    #bedaiin nama servicenya klo ada docker-compose file yg mau di up
     #bedaiin port nya klo ada docker-compose file yg mau di up
     restart: unless-stopped
     tty: true
