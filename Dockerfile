@@ -16,8 +16,13 @@ ADD target/libs                                                      libs
 #host machine url2
 #host machine url3
 
+#add healthcheck file
+ADD healthcheck.sh                       healthcheck.sh
+
 # add suite files / testng
 ADD testng.xml                           testng.xml
+
+ENTRYPOINT sh healthcheck.sh
 
 ENTRYPOINT java -cp grid.docker.com-1.0.0.jar:grid.docker.com-1.0.0-tests.jar:libs/* -Dbrowser=$browser -Dhub_host=$hub_host org.testng.TestNG $module
 #java -cp grid.docker.com-1.0.0.jar:grid.docker.com-1.0.0-tests.jar:libs/* -Dbrowser=chrome org.testng.TestNG ../testng.xml

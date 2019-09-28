@@ -35,6 +35,13 @@ services:
         aliases:
         - chrome
 
+  search-module:
+    image: beserk/seleniumgrid:1.0.0
+    depends_on:
+    - zaleniumgrid
+    environment:
+    - module=testng.xml
+
   mock:
     image: elgalu/google_adwords_mock
     depends_on:
