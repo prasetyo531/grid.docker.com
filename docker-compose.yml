@@ -20,7 +20,8 @@ services:
     - dosel
     hostname: myhost
     ports:
-    - "4444:4444"
+    - "4445:4445"
+    #bedaiin port nya klo ada docker-compose file yg mau di up
     restart: unless-stopped
     tty: true
     command: ["start", "--desiredContainers", "5", "--maxDockerSeleniumContainers", "20","--sauceLabsEnabled","false","--screenWidth", "1920", "--screenHeight", "1080"]
@@ -38,10 +39,10 @@ services:
     depends_on:
     - zalenium
     ports:
-    - 8081:8081
-    tty: trueautomation-master_default
+    - 8082:8082
+    tty: true
     environment:
-    - MOCK_SERVER_PORT=8081
+    - MOCK_SERVER_PORT=8082
 
 networks:
   mynetwork:
