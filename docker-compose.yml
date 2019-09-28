@@ -38,7 +38,7 @@ services:
   mock:
     image: elgalu/google_adwords_mock
     depends_on:
-    - zalenium
+    - zaleniumgrid
     ports:
     - 8082:8082
     tty: true
