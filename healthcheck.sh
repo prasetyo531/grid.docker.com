@@ -18,4 +18,4 @@ then
 fi
 
 #start java command
-#java -cp grid.docker.com-1.0.0.jar:grid.docker.com-1.0.0-tests.jar:libs/* -Dbrowser=$browser -Dhub_host=$hub_host org.testng.TestNG $module
+java -cp grid.docker.com-1.0.0.jar:grid.docker.com-1.0.0-tests.jar:libs/* -Dbrowser=$browser -Dhub_host=$hub_host org.testng.TestNG $module
