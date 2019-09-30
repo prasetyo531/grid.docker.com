@@ -20,7 +20,7 @@ services:
     - dosel
     hostname: myhost
     ports:
-    - "4445:4445"
+    - "4444:4444"
     #bedaiin nama servicenya klo ada docker-compose file yg mau di up
     #bedaiin port nya klo ada docker-compose file yg mau di up
     restart: unless-stopped
