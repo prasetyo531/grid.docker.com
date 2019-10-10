@@ -69,18 +69,25 @@ public class homepage {
 	public void HoverClickMenuAddProduct(){
 
 		Actions act = new Actions(driver);
-		act.moveToElement(this.hoverAddProduct).perform();
-		act.click(addProduct).perform();
-
-		//asser.addproducttodisplay();
+		try {
+			this.wait.until(ExpectedConditions.elementToBeClickable(hoverAddProduct)).isEnabled();
+			act.moveToElement(hoverAddProduct).perform();
+			act.click(addProduct).perform();
+		} catch (Exception e){
+			e.printStackTrace();
+		}
 	}
 
 	public void HoverClickMenuAddReview(){
 
-		Actions act = new Actions(driver);
-		act.moveToElement(this.hoverAddProduct).perform();
-		act.click(addReview).perform();
-	}
+        Actions act = new Actions(driver);
+        try {
+            this.wait.until(ExpectedConditions.elementToBeClickable(hoverAddProduct)).isEnabled();
+            act.moveToElement(hoverAddProduct).perform();
+            act.click(addReview).perform();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
 
 
 }
