@@ -4,10 +4,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class login {
-	
-	public WebDriver driver=null;
+
+	private WebDriver driver;
+	private WebDriverWait wait;
+
+	@FindBy(css = "span[id='id_menuburger_home']")
+	@CacheLookup
+	private WebElement hamburger;
 
 	By username=By.cssSelector("input[placeholder='Email / Username']");
 	By password=By.cssSelector("input[placeholder='Password']");
