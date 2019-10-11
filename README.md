@@ -9,3 +9,5 @@ docker run -e browser=chrome -e hub_host=your_IP -e module=testng.xml beserk/gri
     module = test_suite of developer
 **/
 ```
+
+please fork and pull requrest to modify
