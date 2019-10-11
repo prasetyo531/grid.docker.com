@@ -78,16 +78,16 @@ public class homepage {
 		}
 	}
 
-	public void HoverClickMenuAddReview(){
+	public void HoverClickMenuAddReview() {
 
-        Actions act = new Actions(driver);
-        try {
-            this.wait.until(ExpectedConditions.elementToBeClickable(hoverAddProduct)).isEnabled();
-            act.moveToElement(hoverAddProduct).perform();
-            act.click(addReview).perform();
-        } catch (Exception e){
-            e.printStackTrace();
-        }
+		Actions act = new Actions(driver);
+		try {
+			this.wait.until(ExpectedConditions.elementToBeClickable(hoverAddProduct)).isEnabled();
+			act.moveToElement(hoverAddProduct).perform();
+			act.click(addReview).perform();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
-
+	}
 }
