@@ -19,7 +19,7 @@ public class addProduct {
         private WebDriver driver;
         private WebDriverWait wait;
 
-        assertHome asser = new assertHome(driver);
+        assertHome assert = new assertHome(driver);
 
 //upload product image
         @FindBy(id = "id_sure")
