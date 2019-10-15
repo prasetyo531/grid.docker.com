@@ -128,8 +128,4 @@ public class reviews {
     @CacheLookup
     private WebElement newsLetter;
 
-
-
-
-
 }
