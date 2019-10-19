@@ -15,27 +15,28 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.logging.Level;
 
-public class baseTest {
+public class BaseTest {
 
     protected WebDriver driver;
 
     @BeforeTest
-    public void setupDriver(ITestContext ctx) throws MalformedURLException {
+    @Parameters({"browser"})
+    public void setupDriver(String browser, ITestContext ctx) throws MalformedURLException {
         // BROWSER => chrome / firefox
         // HUB_HOST => localhost / 10.0.1.3 / hostname
 
         String host = "localhost";
-        DesiredCapabilities dc= DesiredCapabilities.chrome();
+        DesiredCapabilities dc;
 
-        if (System.getProperty("browser") != null &&
-                System.getProperty("browser").equalsIgnoreCase("chrome")) {
-            dc = DesiredCapabilities.chrome();
-        } else {
+        if (System.getProperty(browser) != null &&
+                System.getProperty(browser).equalsIgnoreCase("firefox")) {
             dc = DesiredCapabilities.firefox();
+        } else {
+            dc = DesiredCapabilities.chrome();
         }
 
-        if (System.getProperty("hub_host") != null) {
-            host = System.getProperty("hub_host");
+        if (System.getProperty("HUB_HOST") != null) {
+            host = System.getProperty("HUB_HOST");
         }
 
         String testName = ctx.getCurrentXmlTest().getName();
