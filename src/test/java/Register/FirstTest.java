@@ -1,15 +1,12 @@
 package Register;
 
 import AssertObject.assertHome;
-import Controller.BaseTest;
+import Controller.baseTest;
 import Pages.homepage;
 import Pages.login;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
@@ -19,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertTrue;
 
-public class FirstTest extends BaseTest {
+public class FirstTest extends baseTest {
 
     public static WebElement main = null;
     public static Properties prop = null;
