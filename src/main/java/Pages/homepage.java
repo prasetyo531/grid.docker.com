@@ -24,6 +24,7 @@ public class homepage {
 	//	@CacheLookup
 	//	private WebElement hamburger;
 
+//header Homepage
 	@FindBy(id = "id_logo_home")
 	@CacheLookup
 	private WebElement logoHomepage;
@@ -44,6 +45,36 @@ public class homepage {
 	@CacheLookup
 	private WebElement loggedHeader;
 
+	@FindBy(id = "id_big_ads_home")
+	@CacheLookup
+	private WebElement bigAds;
+
+//menu Burger
+	@FindBy(linkText = "Reviews")
+	@CacheLookup
+	private WebElement reviews;
+
+	@FindBy(linkText = "Editorial")
+	@CacheLookup
+	private WebElement editorial;
+
+	@FindBy(linkText = "Talk")
+	@CacheLookup
+	private WebElement talk;
+
+	@FindBy(css = "div[class='gbheader-add-area']")
+	@CacheLookup
+	private WebElement hoverAddProduct;
+
+	@FindBy(linkText = "Add Product")
+	@CacheLookup
+	private WebElement addProduct;
+
+	@FindBy(linkText = "Add Review")
+	@CacheLookup
+	private WebElement addReview;
+
+//homepage
 	@FindBy(id = "id_image_55237")
 	@CacheLookup
 	private WebElement editorChoices;
@@ -76,9 +107,9 @@ public class homepage {
 	@CacheLookup
 	private WebElement buttonSeeMoreLatestReviews;
 
-	@FindBy(id = "id_desc_review_home_59918")
+	@FindBy(id = "id_desc_review_home_55568")
 	@CacheLookup
-	private WebElement snippetReview;
+	private WebElement reviewCard;
 
 	@FindBy(id = "id_see_more_popular_talk")
 	@CacheLookup
@@ -104,6 +135,7 @@ public class homepage {
 	@CacheLookup
 	private WebElement topBrands;
 
+//footer Homepage
 	@FindBy(id = "id_aboutus")
 	@CacheLookup
 	private WebElement aboutUs;
@@ -124,21 +156,21 @@ public class homepage {
 	@CacheLookup
 	private WebElement reviews;
 
-	@FindBy(css = "div[class='gbheader-add-area']")
+	@FindBy(id = "id_privacy_policy")
 	@CacheLookup
-	private WebElement hoverAddProduct;
+	private WebElement privacyPolicy;
 
-	@FindBy(linkText = "Add Product")
+	@FindBy(id = "id_help")
 	@CacheLookup
-	private WebElement addProduct;
+	private WebElement help;
 
-	@FindBy(linkText = "Add Review")
+	@FindBy(id = "id_awards")
 	@CacheLookup
-	private WebElement addReview;
+	private WebElement awards;
 
-	@FindBy(id = "Review Card")
+	@FindBy(id = "id_newsletter")
 	@CacheLookup
-	private WebElement reviewCard;
+	private WebElement newsLetter;
 
 	public homepage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
