@@ -152,10 +152,6 @@ public class homepage {
 	@CacheLookup
 	private WebElement TC;
 
-	@FindBy(linkText = "Reviews")
-	@CacheLookup
-	private WebElement reviews;
-
 	@FindBy(id = "id_privacy_policy")
 	@CacheLookup
 	private WebElement privacyPolicy;
