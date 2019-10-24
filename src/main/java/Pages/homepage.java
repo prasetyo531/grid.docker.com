@@ -18,7 +18,7 @@ public class homepage {
 	private WebDriver driver;
 	private WebDriverWait wait;
 
-	assertHome assert = new assertHome(driver);
+	assertHome asser = new assertHome(driver);
 
 	//	@FindBy(how = How.CSS, using = "span[id='id_menuburger_home']")
 	//	@CacheLookup

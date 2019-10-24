@@ -18,7 +18,7 @@ public class brands {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    assertHome assert = new assertHome(driver);
+    assertHome asser = new assertHome(driver);
 
     @FindBy(css = "div[class='jsx-1348742016 breadcrumb-section-text']")
     @CacheLookup
@@ -55,10 +55,5 @@ public class brands {
     @FindBy(id = "id_sort_by")
     @CacheLookup
     private WebElement fieldAlphabet;
-
-    @FindBy(id = "id_sort_by")
-    @CacheLookup
-    private WebElement fieldAlphabet;
-
 
 }

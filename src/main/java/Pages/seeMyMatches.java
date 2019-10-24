@@ -24,7 +24,7 @@ public class seeMyMatches {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    assertHome assert = new assertHome(driver);
+    assertHome asser = new assertHome(driver);
 
     @FindBy(css = "div[class='user-profile']")
     @CacheLookup

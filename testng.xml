@@ -8,7 +8,7 @@
     </test>
     <test name="Test-errorBeforeLoginDua">
         <classes>
-            <class name="Register.registerSkipConcern"/>
+            <class name="Register.register"/>
         </classes>
     </test>
 </suite> <!-- Suite -->

@@ -18,7 +18,7 @@ public class productDetail {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    assertHome assert = new assertHome(driver);
+    assertHome asser = new assertHome(driver);
 
     @FindBy(xpath = "//img[@src='//static.femaledaily.com/dyn/460/images/prod-pics/1448005795-Ultima_II-Creamy_Powder_Blush.jpg']")
     @CacheLookup
@@ -27,10 +27,6 @@ public class productDetail {
     @FindBy(id = "id_button_review")
     @CacheLookup
     private WebElement buttonAddReview;
-
-    @FindBy(id = "button-wishlist")
-    @CacheLookup
-    private WebElement buttonWishlist;
 
     @FindBy(id = "button-wishlist")
     @CacheLookup

@@ -18,17 +18,13 @@ public class productList {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    assertHome assert = new assertHome(driver);
+    assertHome asser = new assertHome(driver);
 
     @FindBy(id = "id_sort_by")
     @CacheLookup
     private WebElement sortByProduct;
 
     @FindBy(id = "id_product_image_14598")
-    @CacheLookup
-    private WebElement imageProduct;
-
-    @FindBy(css = "div[class='jsx-2470558511 product-card-catalog-pict-hover-button']")
     @CacheLookup
     private WebElement imageProduct;
 

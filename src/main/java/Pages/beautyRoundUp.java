@@ -17,7 +17,7 @@ public class beautyRoundUp {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    assertHome assert = new assertHome(driver);
+    assertHome asser = new assertHome(driver);
 
 
 //beauty round up

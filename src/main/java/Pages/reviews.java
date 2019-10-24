@@ -17,7 +17,7 @@ public class reviews {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    assertHome assert = new assertHome(driver);
+    assertHome asser = new assertHome(driver);
 
     @FindBy(id = "id_logo_home")
     @CacheLookup
