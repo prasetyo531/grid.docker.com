@@ -76,10 +76,6 @@ public class homepage {
 	@CacheLookup
 	private WebElement buttonSeeMoreLatestReviews;
 
-	@FindBy(id = "id_see_more_reviews")
-	@CacheLookup
-	private WebElement buttonSeeMoreLatestReviews;
-
 	@FindBy(id = "id_desc_review_home_59918")
 	@CacheLookup
 	private WebElement snippetReview;
