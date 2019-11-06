@@ -3,7 +3,12 @@
 <suite name="Suite" parallel="tests" verbose="2" thread-count="2">
     <test name="Test-errorBeforeLogin">
         <classes>
-            <class name="addProduct.addproduct"/>
+            <class name="Register.register"/>
+        </classes>
+    </test>
+    <test name="Test-errorBeforeLogin2">
+        <classes>
+            <class name="Register.registerSkipConcern"/>
         </classes>
     </test>
 </suite> <!-- Suite -->

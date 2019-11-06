@@ -1,17 +1,26 @@
 package Pages;
 
 import AssertObject.assertHome;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+import java.util.NoSuchElementException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+
+import static org.testng.Assert.assertNotNull;
 
 public class homepage {
 
@@ -24,7 +33,7 @@ public class homepage {
 	//	@CacheLookup
 	//	private WebElement hamburger;
 
-//header Homepage
+// HEADER HOMEPAGE
 	@FindBy(id = "id_logo_home")
 	@CacheLookup
 	private WebElement logoHomepage;
@@ -49,7 +58,11 @@ public class homepage {
 	@CacheLookup
 	private WebElement bigAds;
 
-//menu Burger
+// MENU BURGER
+//    @FindBy(css = "div[class='jsx-3569249403 new-menu-title-2']")
+//    @CacheLookup
+//	private WebElement reviews;
+
 	@FindBy(linkText = "Reviews")
 	@CacheLookup
 	private WebElement reviews;
@@ -74,7 +87,7 @@ public class homepage {
 	@CacheLookup
 	private WebElement addReview;
 
-//homepage
+// HOMEPAGE
 	@FindBy(id = "id_image_55237")
 	@CacheLookup
 	private WebElement editorChoices;
@@ -135,7 +148,7 @@ public class homepage {
 	@CacheLookup
 	private WebElement topBrands;
 
-//footer Homepage
+// FOOTER HOMEPAGE
 	@FindBy(id = "id_aboutus")
 	@CacheLookup
 	private WebElement aboutUs;
@@ -175,19 +188,38 @@ public class homepage {
 		this.wait = new WebDriverWait(driver, 30);
 		PageFactory.initElements(driver, this);
 
+
 	}
 
 	public void WaitHamburger() {
 
-		this.wait.until(ExpectedConditions.elementToBeClickable(this.hamburger));
-		this.hamburger.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(hamburger));
+//		hamburger.click();
 
+		Actions act = new Actions(driver);
+		try {
+			Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver).pollingEvery(Duration.ofSeconds(50)).withTimeout(Duration.ofSeconds(100)).ignoring(NoSuchElementException.class);
+			((FluentWait) fluentWait).until(ExpectedConditions.visibilityOf(hamburger));
+			act.moveToElement(hamburger).perform();
+			//act.click(hamburger).perform();
+			hamburger.click();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void ClickMenuReview() {
 
-		this.wait.until(ExpectedConditions.elementToBeClickable(this.reviews));
-		this.reviews.click();
+//		wait.until(ExpectedConditions.elementToBeClickable(reviews));
+//		reviews.click();
+		Actions act = new Actions(driver);
+		try {
+			Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver).pollingEvery(Duration.ofSeconds(50)).withTimeout(Duration.ofSeconds(100)).ignoring(NoSuchElementException.class);
+			((FluentWait) fluentWait).until(ExpectedConditions.visibilityOf(reviews));
+			reviews.click();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void HoverClickMenuAddProduct() {
@@ -213,5 +245,9 @@ public class homepage {
 			e.printStackTrace();
 		}
 
+	}
+
+	public void setLoginHeader() {
+		this.loggedHeader.click();
 	}
 }

@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class login {
@@ -17,6 +18,14 @@ public class login {
 	@CacheLookup
 	private WebElement hamburger;
 
+	@FindBy(css = "input[data-element-id='button-red']")
+	@CacheLookup
+	private WebElement loginBtn;
+
+	@FindBy(id = "login_home")
+	@CacheLookup
+	private WebElement userLogin;
+
 	By username=By.cssSelector("input[placeholder='Email / Username']");
 	By password=By.cssSelector("input[placeholder='Password']");
 	By rememberme=By.xpath("//*[@id='__next']/div/div/div[2]/div/form/div[4]/div[1]/div/span");
@@ -24,7 +33,7 @@ public class login {
 	By emailForgotPassword=By.cssSelector("input[placeholder='Email']");
 	By sendEmailForgotPass=By.cssSelector("input[value='SEND AN EMAIL']");
 	By warningMesssage=By.xpath("//*[@id='__next']/div/div/div[2]/div/form/div[1]");
-	By buttonlogin=By.cssSelector("input[value='Login']");
+	//By buttonlogin=By.cssSelector("input[value='Login']");
 	By buttonloginFb=By.cssSelector("input[value='Login with Facebook']");
 	
 	
@@ -40,13 +49,20 @@ public class login {
 	
 	public login(WebDriver driver) {
 		// TODO Auto-generated constructor stub
+
+		this.driver = driver;
+		this.wait = new WebDriverWait(driver, 30);
+		PageFactory.initElements(driver, this);
 		
-		this.driver=driver;
-		
+	}
+
+	public void clickBtnLoginUser() {
+
+		userLogin.click();
 	}
 	
 	public WebElement fillusername(){
-		
+
 		return driver.findElement(username);
 	}
 	
@@ -56,7 +72,7 @@ public class login {
 	}
 	
 	public WebElement clickForgotPassword(){
-		
+
 		return driver.findElement(forgotPassword);
 	}
 	
@@ -65,9 +81,9 @@ public class login {
 		return driver.findElement(sendEmailForgotPass);
 	}
 	
-	public WebElement clickbuttonlogin(){
-		
-		return driver.findElement(buttonlogin);
+	public void clickbuttonlogin(){
+
+		loginBtn.click();
 	}
 	
 	//register page
