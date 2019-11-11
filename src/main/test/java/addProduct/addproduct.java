@@ -39,7 +39,6 @@ public class addproduct extends baseTest {
 
             login logpro = new login(driver);
             homepage home = new homepage(driver);
-            //reviews reviewsPage = new reviews(driver);
             addProduct addNewProd = new addProduct(driver);
 
             driver.get("https://femaledaily.com/");
@@ -59,9 +58,6 @@ public class addproduct extends baseTest {
                 System.out.println("Test Failed");
                 fail("Test Failed");
             }
-
-            //@Test(description = "add product", dependsOnMethods = "login")
-            //public void addproduct () throws InterruptedException, AWTException, TimeoutException {
 
                 home.WaitHamburger();
 

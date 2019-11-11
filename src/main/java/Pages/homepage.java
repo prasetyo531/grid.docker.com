@@ -193,7 +193,7 @@ public class homepage {
 
 	public void WaitHamburger() {
 
-//		wait.until(ExpectedConditions.elementToBeClickable(hamburger));
+//		wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("hamburger")));
 //		hamburger.click();
 
 		Actions act = new Actions(driver);
@@ -210,8 +210,9 @@ public class homepage {
 
 	public void ClickMenuReview() {
 
-//		wait.until(ExpectedConditions.elementToBeClickable(reviews));
+//		WebElement until = wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("reviews")));
 //		reviews.click();
+
 		Actions act = new Actions(driver);
 		try {
 			Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver).pollingEvery(Duration.ofSeconds(50)).withTimeout(Duration.ofSeconds(100)).ignoring(NoSuchElementException.class);
