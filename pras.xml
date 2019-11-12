@@ -2,19 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="tests" verbose="2" thread-count="2">
     <test name="Test-errorBeforeLogin">
-        <parameter name="browser" value="chrome"/>
         <classes>
-<<<<<<< HEAD
             <class name="Register.register"/>
         </classes>
     </test>
-    <test name="Test-errorBeforeLoginDua">
-        <parameter name="browser" value="firefox"/>
+    <test name="Test-errorBeforeLogin2">
         <classes>
-            <class name="Register.register"/>
-=======
-            <class name="addProduct.addproduct"/>
->>>>>>> elementmacia
+            <class name="Register.registerSkipConcern"/>
         </classes>
     </test>
 </suite> <!-- Suite -->

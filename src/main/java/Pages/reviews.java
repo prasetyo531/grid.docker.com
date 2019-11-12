@@ -4,6 +4,7 @@ import AssertObject.assertHome;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.CacheLookup;
@@ -95,6 +96,19 @@ public class reviews {
     @CacheLookup
     private WebElement buttonLearnMore;
 
+//Add product add review
+    @FindBy(css = "div[class='button-add']")
+    @CacheLookup
+    private WebElement AddBtn;
+
+    @FindBy(linkText = "Add Product")
+    @CacheLookup
+    private WebElement buttonAddProduct;
+
+    @FindBy(linkText = "Add Review")
+    @CacheLookup
+    private WebElement buttonAddReview;
+
 //footer page
     @FindBy(id = "id_aboutus")
     @CacheLookup
@@ -127,5 +141,18 @@ public class reviews {
     @FindBy(id = "id_newsletter")
     @CacheLookup
     private WebElement newsLetter;
+
+    public reviews(WebDriver driver) {
+        // TODO Auto-generated constructor stub
+
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, 30);
+        PageFactory.initElements(driver, this);
+
+    }
+
+    public void clickDropdownAdd() {
+        AddBtn.click();
+    }
 
 }

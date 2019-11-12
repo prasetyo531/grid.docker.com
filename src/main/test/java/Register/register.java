@@ -55,9 +55,8 @@ public class register extends baseTest {
         assertTrue(UrlLogin.contains("account.femaledaily"));
 
         logpro.fillusername().sendKeys(email);
-        logpro.fillusername().sendKeys(username);
         logpro.fillpassword().sendKeys(password);
-        logpro.clickbuttonlogin().click();
+        logpro.clickbuttonlogin();
 
     }
 

@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 import static org.testng.Assert.assertTrue;
 
@@ -29,7 +30,7 @@ public class registerSkipConcern extends baseTest {
     public String UrlLogin = null;
 
     @Test(dataProvider = "getDataRegister")
-    public void registerSkipConcern(String email, String username, String password) throws InterruptedException {
+    public void registerSkipConcern(String email, String username, String password) throws InterruptedException, TimeoutException {
 
         homepage home = new homepage(driver);
         login logpro = new login(driver);
@@ -57,7 +58,7 @@ public class registerSkipConcern extends baseTest {
         logpro.fillusername().sendKeys(email);
         logpro.fillusername().sendKeys(username);
         logpro.fillpassword().sendKeys(password);
-        logpro.clickbuttonlogin().click();
+        logpro.clickbuttonlogin();
     }
 
     @AfterMethod
