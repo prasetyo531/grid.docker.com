@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="545bcbc0-9cac-4385-9c4a-b43ab83e63fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/addProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/addProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/homepage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/addProduct/addproduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/addProduct/addproduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Pages/addProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/addProduct.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Pages/homepage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/homepage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/addProduct/addproduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/addProduct/addproduct.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,9 +21,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1SEFP7l9NyR5WnHQqYojhPYYHLV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/java-selenium" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../java-selenium" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -66,7 +64,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/grid/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="C:/grid/testng.xml" type="TestNG" nameIsGenerated="true">
       <module name="grid.docker.com" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
@@ -112,7 +110,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/grid/testng.xml" />
         <item itemvalue="TestNG.C:/grid/pras.xml" />
         <item itemvalue="TestNG.addproduct" />
         <item itemvalue="TestNG.register" />

@@ -4,7 +4,6 @@
     <test name="Test-errorBeforeLogin">
         <parameter name="browser" value="chrome"/>
         <classes>
-<<<<<<< HEAD
             <class name="Register.register"/>
         </classes>
     </test>
@@ -12,9 +11,6 @@
         <parameter name="browser" value="firefox"/>
         <classes>
             <class name="Register.register"/>
-=======
-            <class name="addProduct.addproduct"/>
->>>>>>> elementmacia
         </classes>
     </test>
 </suite> <!-- Suite -->
