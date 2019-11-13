@@ -11,7 +11,7 @@
     <build>
     <!--  cek testng file  -->
     <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
-    <testSourceDirectory>src/main/java/test</testSourceDirectory>
+    <testSourceDirectory>${basedir}</testSourceDirectory>
     <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
