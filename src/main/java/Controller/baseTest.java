@@ -46,7 +46,7 @@ public class baseTest {
 
     }
 
-    @AfterClass
+    @AfterTest
     public void terminate () {
         //Remove the ThreadLocalMap element
        this.driver.quit();

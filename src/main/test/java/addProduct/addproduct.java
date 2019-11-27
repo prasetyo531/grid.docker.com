@@ -60,9 +60,7 @@ public class addproduct extends baseTest {
             }
 
                 home.WaitHamburger();
-
                 home.ClickMenuReview();
-
                 home.HoverClickMenuAddProduct();
 
                 Thread.sleep(5000);
@@ -106,8 +104,8 @@ public class addproduct extends baseTest {
                 //kanan for no parameter you send
                 data = new Object[1][2];
 
-                data[0][0] = "maciahauna";
-                data[0][1] = "hanamasa";
+                data[0][0] = "apkprod42";
+                data[0][1] = "test123";
 
                 return data;
             }

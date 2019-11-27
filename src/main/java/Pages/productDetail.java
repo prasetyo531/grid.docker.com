@@ -2,6 +2,7 @@ package Pages;
 
 import AssertObject.assertHome;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -24,13 +25,17 @@ public class productDetail {
     @CacheLookup
     private WebElement image;
 
+    @FindBy(id = "name-brand")
+    @CacheLookup
+    private WebElement brandName;
+
     @FindBy(id = "id_button_review")
     @CacheLookup
-    private WebElement buttonAddReview;
+    private WebElement btnAddReview;
 
-    @FindBy(id = "button-wishlist")
+    @FindBy(id = "button-review")
     @CacheLookup
-    private WebElement buttonWishlist;
+    private WebElement btnWishlist;
 
     @FindBy(id = "id_tab_reviews")
     @CacheLookup
@@ -68,4 +73,37 @@ public class productDetail {
     @CacheLookup
     private WebElement listSimilarProduct;
 
+
+    public productDetail(WebDriver driver) {
+        // TODO Auto-generated constructor stub
+
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, 30);
+        PageFactory.initElements(driver, this);
+
+    }
+    public void clickBrandName() {
+
+        WebElement brandName = driver.findElement(By.xpath ("//*[@id=\"id-product-details\"]/div[2]/div[2]/div[1]/div[1]/a/h2"));
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", brandName);
+
+        wait.until(ExpectedConditions.elementToBeClickable(brandName));
+        brandName.click();
+
+    }
+
+    public void clickAddReview() {
+        wait.until (ExpectedConditions.elementToBeClickable (btnAddReview));
+        btnAddReview.click ();
+    }
+
+    public void clickBtnWishlist() {
+        wait.until (ExpectedConditions.elementToBeClickable (btnWishlist));
+        btnWishlist.click ();
+    }
+
 }
+
+

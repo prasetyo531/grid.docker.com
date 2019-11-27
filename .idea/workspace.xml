@@ -2,18 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="545bcbc0-9cac-4385-9c4a-b43ab83e63fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/categoryList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/newestReviews.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/java/productDetail/addReviewByGuestUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/java/productDetail/addReviewThenEdit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/java/productDetail/detailProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/java/productDetail/viewByClickBrand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/java/productDetail/viewByClickBrandOnReviewerForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/java/productDetail/wishlistByGuestUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/grid.docker.com.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/grid.docker.com.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/baseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/baseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pages/addProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/addProduct.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pages/homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/homepage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/productDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/productDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/reviews.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/reviews.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test/java/addProduct/addproduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/addProduct/addproduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/baseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/baseTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Pages/addProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/addProduct.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Pages/homepage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/homepage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pages/productDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/productDetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pages/reviews.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/reviews.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/addProduct/addproduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/addProduct/addproduct.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -25,18 +46,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
   <component name="ProjectId" id="1SEFP7l9NyR5WnHQqYojhPYYHLV" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/java-selenium" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.scala.compiler.ScalaCompileServerForm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\grid" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Pages" />
+      <recent name="productDetail" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\grid\src\main\test" />
@@ -93,6 +121,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="detailProduct" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="grid.docker.com" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="productDetail.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="productDetail" />
+      <option name="MAIN_CLASS_NAME" value="productDetail.detailProduct" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="register" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="grid.docker.com" />
       <extension name="coverage">
@@ -114,6 +159,7 @@
       <list>
         <item itemvalue="TestNG.C:/grid/testng.xml" />
         <item itemvalue="TestNG.C:/grid/pras.xml" />
+        <item itemvalue="TestNG.detailProduct" />
         <item itemvalue="TestNG.addproduct" />
         <item itemvalue="TestNG.register" />
       </list>

@@ -2,6 +2,7 @@ package Pages;
 
 import AssertObject.assertHome;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
@@ -20,127 +21,43 @@ public class reviews {
 
     assertHome asser = new assertHome(driver);
 
-    @FindBy(id = "id_logo_home")
+// OVERALL RATING
+    @FindBy(id = "id_star1")
     @CacheLookup
-    private WebElement logoHomepage;
+    private WebElement star1;
 
-    @FindBy(css = "span[id='id_menuburger_home']")
+    @FindBy(id = "id_star2")
     @CacheLookup
-    private WebElement hamburger;
+    private WebElement star2;
 
-    @FindBy(id = "id_search_input_field_reviews")
+    @FindBy(id = "id_star3")
     @CacheLookup
-    private WebElement searchField;
+    private WebElement star3;
 
-    @FindBy(id = "login_home")
+    @FindBy(id = "id_star4")
     @CacheLookup
-    private WebElement loginHeader;
+    private WebElement star4;
 
-    @FindBy(css = "div[class='gbheader-userprofile']")
+    @FindBy(id = "id_star5")
     @CacheLookup
-    private WebElement loggedHeader;
+    private WebElement star5;
 
-    @FindBy(id = "id_big_adds_reviews")
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[2]/button")
     @CacheLookup
-    private WebElement bigAds;
+    private WebElement btnNext1;
 
-    @FindBy(css = "div[class='jsx-416833890 main-header-categories']")
+    @FindBy(linkText = "NEXT")
     @CacheLookup
-    private WebElement mainHeaderCategory;
+    private WebElement btnCancel1;
 
-    @FindBy(id = "id_group_8")
-    @CacheLookup
-    private WebElement skincare;
+// USAGE PERIODE
 
-    @FindBy(id = "id_group_91")
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[1]/p")
     @CacheLookup
-    private WebElement makeup;
+    private WebElement btnlessThan1Week;
 
-    @FindBy(id = "id_group_1")
-    @CacheLookup
-    private WebElement body;
+    
 
-    @FindBy(id = "id_group_5")
-    @CacheLookup
-    private WebElement hair;
-
-    @FindBy(id = "id_group_2")
-    @CacheLookup
-    private WebElement fragrance;
-
-    @FindBy(id = "id_group_7")
-    @CacheLookup
-    private WebElement nails;
-
-    @FindBy(id = "id_group_9")
-    @CacheLookup
-    private WebElement tools;
-
-    @FindBy(css = "div[class='jsx-416833890 main-header-categories-item']")
-    @CacheLookup
-    private WebElement Brands;
-
-    @FindBy(id = "id_prevpage")
-    @CacheLookup
-    private WebElement buttonPrev;
-
-    @FindBy(id = "id_nextpage")
-    @CacheLookup
-    private WebElement buttonNext;
-
-    @FindBy(id = "id-button-page-1")
-    @CacheLookup
-    private WebElement buttonPage;
-
-    @FindBy(css = "div[class='jsx-1925477530 hb-btn']")
-    @CacheLookup
-    private WebElement buttonLearnMore;
-
-//Add product add review
-    @FindBy(css = "div[class='button-add']")
-    @CacheLookup
-    private WebElement AddBtn;
-
-    @FindBy(linkText = "Add Product")
-    @CacheLookup
-    private WebElement buttonAddProduct;
-
-    @FindBy(linkText = "Add Review")
-    @CacheLookup
-    private WebElement buttonAddReview;
-
-//footer page
-    @FindBy(id = "id_aboutus")
-    @CacheLookup
-    private WebElement aboutUs;
-
-    @FindBy(id = "id_feedback")
-    @CacheLookup
-    private WebElement feedback;
-
-    @FindBy(id = "id_contact")
-    @CacheLookup
-    private WebElement contact;
-
-    @FindBy(id = "id_tc")
-    @CacheLookup
-    private WebElement TC;
-
-    @FindBy(id = "id_privacy_policy")
-    @CacheLookup
-    private WebElement privacyPolicy;
-
-    @FindBy(id = "id_help")
-    @CacheLookup
-    private WebElement help;
-
-    @FindBy(id = "id_awards")
-    @CacheLookup
-    private WebElement awards;
-
-    @FindBy(id = "id_newsletter")
-    @CacheLookup
-    private WebElement newsLetter;
 
     public reviews(WebDriver driver) {
         // TODO Auto-generated constructor stub
@@ -151,8 +68,34 @@ public class reviews {
 
     }
 
-    public void clickDropdownAdd() {
-        AddBtn.click();
+    public void clickBrandName() {
+
+        WebElement snp = driver.findElement (By.linkText("SNP"));
+        wait.until(ExpectedConditions.elementToBeClickable(snp));
+        snp.click();
     }
+
+    public void overallRatingPage() {
+
+        wait.until (ExpectedConditions.elementToBeClickable (star1));
+        star1.click ();
+    }
+
+    public void clickBtnNext1() {
+
+        wait.until (ExpectedConditions.elementToBeClickable (btnNext1));
+        btnNext1.click ();
+    }
+
+    public void usagePeriodePage() {
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", btnlessThan1Week);
+
+        wait.until (ExpectedConditions.elementToBeClickable (btnlessThan1Week));
+        btnlessThan1Week.click ();
+    }
+
+
 
 }

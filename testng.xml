@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="tests" verbose="2" thread-count="2">
-    <test name="Test-errorBeforeLogin">
+<!--    <test name="ProductDetail">-->
+<!--        <classes>-->
+<!--            <class name="productDetail.detailProduct"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+    <test name="ProductDetail">
         <classes>
-            <class name="addProduct.addproduct"/>
+            <class name="productDetail.wishlistByGuestUser"/>
         </classes>
     </test>
+<!--    <test name="ProductDetail1">-->
+<!--        <classes>-->
+<!--            <class name="productDetail.viewByClickBrandOnReviewerForm"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="AddNewProduct">-->
+<!--        <classes>-->
+<!--            <class name="addProduct.addproduct"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite> <!-- Suite -->
