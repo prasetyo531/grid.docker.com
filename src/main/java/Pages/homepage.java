@@ -272,6 +272,10 @@ public class homepage {
 	public void HoverClickMenuAddProduct() {
 
 		Actions act = new Actions(driver);
+		act.moveToElement(this.hoverAddProduct).perform();
+		act.click(addProduct).perform();
+
+		//asser.addproducttodisplay();
 		try {
 			this.wait.until(ExpectedConditions.elementToBeClickable(hoverAddProduct)).isEnabled();
 			act.moveToElement(hoverAddProduct).perform();
@@ -281,22 +285,20 @@ public class homepage {
 		}
 	}
 
-	public void HoverClickMenuAddReview() {
+	public void HoverClickMenuAddReview(){
 
 		Actions act = new Actions(driver);
-		try {
-			this.wait.until(ExpectedConditions.elementToBeClickable(hoverAddProduct)).isEnabled();
-			act.moveToElement(hoverAddProduct).perform();
-			act.click(addReview).perform();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
+		act.moveToElement(this.hoverAddProduct).perform();
+		act.click(addReview).perform();
 	}
 
+<<<<<<< HEAD
+
+=======
 	public void setLoginHeader() {
 		this.loggedHeader.click();
 	}
+<<<<<<< HEAD
 
 	public void clickProductInHome() {
 		wait.until(ExpectedConditions.elementToBeClickable(editorChoices));
@@ -313,5 +315,8 @@ public class homepage {
 
 	}
 
+=======
+>>>>>>> elementmacia
+>>>>>>> e1993fc9d8b5849916a3c004305d578854e47d61
 }
 
