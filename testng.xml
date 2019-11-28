@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="tests" verbose="2" thread-count="2">
-<!--    <test name="ProductDetail">-->
-<!--        <classes>-->
-<!--            <class name="productDetail.detailProduct"/>-->
-<!--        </classes>-->
-<!--    </test>-->
     <test name="ProductDetail">
-        <parameter name="browser" value="chrome"/>
+        <parameter name="browser" value="Chrome"/>
         <classes>
             <class name="productDetail.addReviewThenEdit"/>
-            </classes>
-        </test>
+        </classes>
+    </test>
+<!--    <test name="AddProduct">-->
+<!--        <parameter name="browser" value="Chrome"/>-->
+<!--        <classes>-->
+<!--            <class name="addProduct.addproduct"/>-->
+<!--            </classes>-->
+<!--        </test>-->
 <!--    <test name="Test-errorBeforeLogin">-->
 <!--        <parameter name="browser" value="chrome"/>-->
 <!--        <classes>-->

@@ -471,8 +471,8 @@ public class categoryList {
 
         WebElement wardah = driver.findElement(By.id("id_product_image_12537"));
 
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click();", wardah);
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        js.executeScript("arguments[0].click();", wardah);
 
         wait.until(ExpectedConditions.elementToBeClickable(wardah));
         wardah.click();

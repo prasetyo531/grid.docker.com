@@ -51,14 +51,6 @@ public class addproduct extends baseTest {
         logpro.fillpassword().sendKeys(password);
         logpro.clickbuttonlogin();
 
-        System.out.println(driver.getTitle());
-        if (!driver.getTitle().equals("Female Daily - Info, Artikel, Video dan Review Seputar Kecantikan")) {
-            System.out.println("Test Passed");
-        } else {
-            System.out.println("Test Failed");
-            fail("Test Failed");
-        }
-
         home.WaitHamburger();
         home.ClickMenuReview();
         home.HoverClickMenuAddProduct();

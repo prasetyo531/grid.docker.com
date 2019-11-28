@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class newestReviews {
+
     private WebDriver driver;
     private WebDriverWait wait;
 
@@ -147,15 +148,5 @@ public class newestReviews {
 
     }
 
-    public void clickDropdownAdd() {
-        AddBtn.click();
-    }
-
-    public void clickBrandName() {
-
-        WebElement snp = driver.findElement (By.linkText("SNP"));
-        wait.until(ExpectedConditions.elementToBeClickable(snp));
-        snp.click();
-    }
 
 }

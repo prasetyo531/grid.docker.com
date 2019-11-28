@@ -73,7 +73,7 @@ public class homepage {
 //    @CacheLookup
 //    private WebElement menuSkincare;
 
-	@FindBy(xpath = "//*[@id=\"id-header\"]/div[2]/div[2]")
+	@FindBy(css = "#id-header > div.jsx-3636492992.main-header-categories > div.jsx-3636492992.main-header-categories-center > a:nth-child(1)")
 	@CacheLookup
 	private WebElement menuSkincare;
 
@@ -307,8 +307,8 @@ public class homepage {
 
 	public void clickMenuSkincare() throws InterruptedException {
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click();", menuSkincare);
+//		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		js.executeScript("arguments[0].click();", menuSkincare);
 
 		wait.until (ExpectedConditions.elementToBeClickable (menuSkincare));
 		menuSkincare.click();

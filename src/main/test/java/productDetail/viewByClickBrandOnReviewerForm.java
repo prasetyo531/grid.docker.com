@@ -35,6 +35,8 @@ public class viewByClickBrandOnReviewerForm extends baseTest {
 
         homepage home = new homepage (driver);
         newestReviews reviews = new newestReviews (driver);
+        categoryList catList = new categoryList (driver);
+        productDetail product = new productDetail (driver);
 
 
         driver.get ("https://femaledaily.com/");
@@ -45,16 +47,20 @@ public class viewByClickBrandOnReviewerForm extends baseTest {
         home.WaitHamburger();
         home.ClickMenuReview();
 
-        reviews.clickBrandName ();
+        home.clickMenuSkincare ();
+
+        catList.clickListMoisturizer ();
+        catList.HoverClickProduct ();
+
+        product.clickBrandName ();
 
         System.out.println(driver.getCurrentUrl ());
-        if (!driver.getCurrentUrl().equals("https://reviews.femaledaily.com/brands/snp?tab=products&parent=&current=&order=popular&page=1")) {
-            System.out.println("Test Passed");
+        if (!driver.getCurrentUrl().equals("https://reviews.femaledaily.com/brands/wardah?tab=products&paren=&current=&order=popular&page=1")) {
+            System.out.println("Test Passed - View List Product By Click Brand");
         } else {
             System.out.println("Test Failed");
             fail("Test Failed");
         }
-
     }
 
 }

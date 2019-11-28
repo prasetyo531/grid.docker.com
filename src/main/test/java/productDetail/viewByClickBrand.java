@@ -42,13 +42,13 @@ public class viewByClickBrand extends baseTest {
 
         product.clickBrandName ();
 
-//        System.out.println(driver.getCurrentUrl ());
-//        if (!driver.getCurrentUrl().equals("https://reviews.femaledaily.com/brands/wardah?tab=products&paren=&current=&order=popular&page=1")) {
-//            System.out.println("Test Passed");
-//        } else {
-//            System.out.println("Test Failed");
-//            fail("Test Failed");
-//        }
+        System.out.println(driver.getCurrentUrl ());
+        if (!driver.getCurrentUrl().equals("https://reviews.femaledaily.com/brands/wardah?tab=products&paren=&current=&order=popular&page=1")) {
+            System.out.println("Test Passed - View List Product By Click Brand");
+        } else {
+            System.out.println("Test Failed");
+            fail("Test Failed");
+        }
     }
 
 }

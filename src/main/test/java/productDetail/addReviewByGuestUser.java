@@ -39,9 +39,9 @@ public class addReviewByGuestUser extends baseTest {
 
         product.clickAddReview ();
 
-        System.out.println(driver.getCurrentUrl());
-        if (!driver.getCurrentUrl().equals("https://account.femaledaily.com/")) {
-            System.out.println("Test Passed");
+        System.out.println(driver.getTitle ());
+        if (!driver.getTitle ().equals("Login")) {
+            System.out.println("Test Passed - User direct to login page");
         } else {
             System.out.println("Test Failed");
         }

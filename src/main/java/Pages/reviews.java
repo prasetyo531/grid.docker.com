@@ -46,7 +46,7 @@ public class reviews {
     @CacheLookup
     private WebElement btnNext1;
 
-    @FindBy(linkText = "NEXT")
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/p")
     @CacheLookup
     private WebElement btnCancel1;
 
@@ -56,7 +56,41 @@ public class reviews {
     @CacheLookup
     private WebElement btnlessThan1Week;
 
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[2]")
+    @CacheLookup
+    private WebElement btnMoreThan1Week;
 
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[3]")
+    @CacheLookup
+    private WebElement btnMoreThan1Mnth;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[4]")
+    @CacheLookup
+    private WebElement btnMoreThan3Mnth;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[5]")
+    @CacheLookup
+    private WebElement btnMoreThan6Mnth;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[6]")
+    @CacheLookup
+    private WebElement btnMoreThan1Year;
+
+    @FindBy(id= "scales")
+    @CacheLookup
+    private WebElement checkBox;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[3]/button[2]")
+    @CacheLookup
+    private WebElement btnNext2;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[3]/button[1]")
+    @CacheLookup
+    private WebElement btnBack;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/p")
+    @CacheLookup
+    private WebElement btnCancel2;
 
 
     public reviews(WebDriver driver) {
@@ -81,21 +115,85 @@ public class reviews {
         star1.click ();
     }
 
-    public void clickBtnNext1() {
+    public void overallRatingPage1() {
+        wait.until (ExpectedConditions.elementToBeClickable (star2));
+        star2.click ();
+    }
 
+    public void overallRatingPage2() {
+        wait.until (ExpectedConditions.elementToBeClickable (star3));
+        star3.click ();
+    }
+
+    public void overallRatingPage3() {
+        wait.until (ExpectedConditions.elementToBeClickable (star4));
+        star4.click ();
+    }
+
+    public void overallRatingPage4() {
+        wait.until (ExpectedConditions.elementToBeClickable (star5));
+        star5.click ();
+    }
+
+    public void clickBtnNext1() {
         wait.until (ExpectedConditions.elementToBeClickable (btnNext1));
         btnNext1.click ();
     }
 
-    public void usagePeriodePage() {
+    public void clickBtnCancel1() {
+        wait.until (ExpectedConditions.elementToBeClickable (btnCancel1));
+        btnCancel1.click ();
+    }
 
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click();", btnlessThan1Week);
-
+    public void usagePeriodePage1() {
         wait.until (ExpectedConditions.elementToBeClickable (btnlessThan1Week));
         btnlessThan1Week.click ();
     }
 
+    public void usagePeriodePage2() {
+        wait.until (ExpectedConditions.elementToBeClickable (btnMoreThan1Week));
+        btnMoreThan1Week.click ();
+    }
 
+    public void usagePeriodePage3() {
+        wait.until (ExpectedConditions.elementToBeClickable (btnMoreThan1Mnth));
+        btnMoreThan1Mnth.click ();
+    }
+
+    public void usagePeriodePage4() {
+        wait.until (ExpectedConditions.elementToBeClickable ( btnMoreThan3Mnth));
+        btnMoreThan3Mnth.click ();
+    }
+
+    public void usagePeriodePage5() {
+        wait.until (ExpectedConditions.elementToBeClickable (btnMoreThan6Mnth));
+        btnMoreThan6Mnth.click ();
+    }
+
+    public void usagePeriodePage6() {
+        wait.until (ExpectedConditions.elementToBeClickable (btnMoreThan1Year));
+        btnMoreThan1Year.click ();
+    }
+
+    public void setCheckBox() {
+        wait.until (ExpectedConditions.elementToBeClickable (checkBox));
+        checkBox.isSelected ();
+    }
+
+    public void clickBtnNext2() {
+        wait.until (ExpectedConditions.elementToBeClickable (btnNext2));
+        btnNext2.click ();
+    }
+
+    public void clickBtnBack() {
+        wait.until (ExpectedConditions.elementToBeClickable (btnBack));
+        btnBack.click ();
+    }
+
+    public void clickBtnCancel2() {
+
+        wait.until (ExpectedConditions.elementToBeClickable (btnCancel2));
+        btnCancel2.click ();
+    }
 
 }
