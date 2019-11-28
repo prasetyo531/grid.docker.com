@@ -69,9 +69,13 @@ public class homepage {
 //    @CacheLookup
 //    private WebElement menuSkincare;
 
-	@FindBy(xpath = "//*[@id=\"id-header\"]/div[2]/div[2]/a[1]")
-    @CacheLookup
-    private WebElement menuSkincare;
+//	@FindBy(xpath = "//*[@id=\"id-header\"]/div[2]/div[2]/a[1]")
+//    @CacheLookup
+//    private WebElement menuSkincare;
+
+	@FindBy(xpath = "//*[@id=\"id-header\"]/div[2]/div[2]")
+	@CacheLookup
+	private WebElement menuSkincare;
 
 	@FindBy(linkText = "Make Up")
 	@CacheLookup
@@ -292,13 +296,9 @@ public class homepage {
 		act.click(addReview).perform();
 	}
 
-<<<<<<< HEAD
-
-=======
 	public void setLoginHeader() {
 		this.loggedHeader.click();
 	}
-<<<<<<< HEAD
 
 	public void clickProductInHome() {
 		wait.until(ExpectedConditions.elementToBeClickable(editorChoices));
@@ -315,8 +315,5 @@ public class homepage {
 
 	}
 
-=======
->>>>>>> elementmacia
->>>>>>> e1993fc9d8b5849916a3c004305d578854e47d61
 }
 

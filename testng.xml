@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="tests" verbose="2" thread-count="2">
-<<<<<<< HEAD
 <!--    <test name="ProductDetail">-->
 <!--        <classes>-->
 <!--            <class name="productDetail.detailProduct"/>-->
 <!--        </classes>-->
 <!--    </test>-->
     <test name="ProductDetail">
-        <classes>
-            <class name="productDetail.wishlistByGuestUser"/>
-=======
-    <test name="Test-errorBeforeLogin">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="Register.register"/>
-        </classes>
-    </test>
-    <test name="Test-errorBeforeLoginDua">
-        <parameter name="browser" value="firefox"/>
-        <classes>
-            <class name="Register.register"/>
->>>>>>> e1993fc9d8b5849916a3c004305d578854e47d61
-        </classes>
-    </test>
+            <class name="productDetail.addReviewThenEdit"/>
+            </classes>
+        </test>
+<!--    <test name="Test-errorBeforeLogin">-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <classes>-->
+<!--            <class name="Register.register"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Test-errorBeforeLoginDua">-->
+<!--        <parameter name="browser" value="firefox"/>-->
+<!--        <classes>-->
+<!--            <class name="Register.register"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 <!--    <test name="ProductDetail1">-->
 <!--        <classes>-->
 <!--            <class name="productDetail.viewByClickBrandOnReviewerForm"/>-->

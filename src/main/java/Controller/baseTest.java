@@ -18,6 +18,8 @@ import java.util.logging.Level;
 public class baseTest {
 
     protected WebDriver driver;
+    private String browser;
+    private ITestContext ctx;
 
     @BeforeTest
     @Parameters({"browser"})

@@ -59,17 +59,14 @@ public class addproduct extends baseTest {
             fail("Test Failed");
         }
 
-<<<<<<< HEAD
-                home.WaitHamburger();
-                home.ClickMenuReview();
-                home.HoverClickMenuAddProduct();
-=======
+        home.WaitHamburger();
+        home.ClickMenuReview();
+        home.HoverClickMenuAddProduct();
         home.WaitHamburger();
 
         home.ClickMenuReview();
 
         home.HoverClickMenuAddProduct();
->>>>>>> e1993fc9d8b5849916a3c004305d578854e47d61
 
         Thread.sleep(5000);
 
@@ -111,14 +108,10 @@ public class addproduct extends baseTest {
         //kiri for numbers of times testcase must execute
         //kanan for no parameter you send
         data = new Object[1][2];
-
-<<<<<<< HEAD
-                data[0][0] = "apkprod42";
-                data[0][1] = "test123";
-=======
+        data[0][0] = "apkprod42";
+        data[0][1] = "test123";
         data[0][0] = "maciahauna";
         data[0][1] = "hanamasa";
->>>>>>> e1993fc9d8b5849916a3c004305d578854e47d61
 
         return data;
     }
