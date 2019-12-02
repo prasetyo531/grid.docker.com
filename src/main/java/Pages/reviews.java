@@ -2,6 +2,7 @@ package Pages;
 
 import AssertObject.assertHome;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
@@ -20,127 +21,77 @@ public class reviews {
 
     assertHome asser = new assertHome(driver);
 
-    @FindBy(id = "id_logo_home")
+// OVERALL RATING
+    @FindBy(id = "id_star1")
     @CacheLookup
-    private WebElement logoHomepage;
+    private WebElement star1;
 
-    @FindBy(css = "span[id='id_menuburger_home']")
+    @FindBy(id = "id_star2")
     @CacheLookup
-    private WebElement hamburger;
+    private WebElement star2;
 
-    @FindBy(id = "id_search_input_field_reviews")
+    @FindBy(id = "id_star3")
     @CacheLookup
-    private WebElement searchField;
+    private WebElement star3;
 
-    @FindBy(id = "login_home")
+    @FindBy(id = "id_star4")
     @CacheLookup
-    private WebElement loginHeader;
+    private WebElement star4;
 
-    @FindBy(css = "div[class='gbheader-userprofile']")
+    @FindBy(id = "id_star5")
     @CacheLookup
-    private WebElement loggedHeader;
+    private WebElement star5;
 
-    @FindBy(id = "id_big_adds_reviews")
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[2]/button")
     @CacheLookup
-    private WebElement bigAds;
+    private WebElement btnNext1;
 
-    @FindBy(css = "div[class='jsx-416833890 main-header-categories']")
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/p")
     @CacheLookup
-    private WebElement mainHeaderCategory;
+    private WebElement btnCancel1;
 
-    @FindBy(id = "id_group_8")
-    @CacheLookup
-    private WebElement skincare;
+// USAGE PERIODE
 
-    @FindBy(id = "id_group_91")
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[1]/p")
     @CacheLookup
-    private WebElement makeup;
+    private WebElement btnlessThan1Week;
 
-    @FindBy(id = "id_group_1")
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[2]")
     @CacheLookup
-    private WebElement body;
+    private WebElement btnMoreThan1Week;
 
-    @FindBy(id = "id_group_5")
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[3]")
     @CacheLookup
-    private WebElement hair;
+    private WebElement btnMoreThan1Mnth;
 
-    @FindBy(id = "id_group_2")
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[4]")
     @CacheLookup
-    private WebElement fragrance;
+    private WebElement btnMoreThan3Mnth;
 
-    @FindBy(id = "id_group_7")
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[5]")
     @CacheLookup
-    private WebElement nails;
+    private WebElement btnMoreThan6Mnth;
 
-    @FindBy(id = "id_group_9")
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[6]")
     @CacheLookup
-    private WebElement tools;
+    private WebElement btnMoreThan1Year;
 
-    @FindBy(css = "div[class='jsx-416833890 main-header-categories-item']")
+    @FindBy(id= "scales")
     @CacheLookup
-    private WebElement Brands;
+    private WebElement checkBox;
 
-    @FindBy(id = "id_prevpage")
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[3]/button[2]")
     @CacheLookup
-    private WebElement buttonPrev;
+    private WebElement btnNext2;
 
-    @FindBy(id = "id_nextpage")
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[3]/button[1]")
     @CacheLookup
-    private WebElement buttonNext;
+    private WebElement btnBack;
 
-    @FindBy(id = "id-button-page-1")
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/p")
     @CacheLookup
-    private WebElement buttonPage;
+    private WebElement btnCancel2;
 
-    @FindBy(css = "div[class='jsx-1925477530 hb-btn']")
-    @CacheLookup
-    private WebElement buttonLearnMore;
-
-//Add product add review
-    @FindBy(css = "div[class='button-add']")
-    @CacheLookup
-    private WebElement AddBtn;
-
-    @FindBy(linkText = "Add Product")
-    @CacheLookup
-    private WebElement buttonAddProduct;
-
-    @FindBy(linkText = "Add Review")
-    @CacheLookup
-    private WebElement buttonAddReview;
-
-//footer page
-    @FindBy(id = "id_aboutus")
-    @CacheLookup
-    private WebElement aboutUs;
-
-    @FindBy(id = "id_feedback")
-    @CacheLookup
-    private WebElement feedback;
-
-    @FindBy(id = "id_contact")
-    @CacheLookup
-    private WebElement contact;
-
-    @FindBy(id = "id_tc")
-    @CacheLookup
-    private WebElement TC;
-
-    @FindBy(id = "id_privacy_policy")
-    @CacheLookup
-    private WebElement privacyPolicy;
-
-    @FindBy(id = "id_help")
-    @CacheLookup
-    private WebElement help;
-
-    @FindBy(id = "id_awards")
-    @CacheLookup
-    private WebElement awards;
-
-    @FindBy(id = "id_newsletter")
-    @CacheLookup
-    private WebElement newsLetter;
 
     public reviews(WebDriver driver) {
         // TODO Auto-generated constructor stub
@@ -151,8 +102,98 @@ public class reviews {
 
     }
 
-    public void clickDropdownAdd() {
-        AddBtn.click();
+    public void clickBrandName() {
+
+        WebElement snp = driver.findElement (By.linkText("SNP"));
+        wait.until(ExpectedConditions.elementToBeClickable(snp));
+        snp.click();
+    }
+
+    public void overallRatingPage() {
+
+        wait.until (ExpectedConditions.elementToBeClickable (star1));
+        star1.click ();
+    }
+
+    public void overallRatingPage1() {
+        wait.until (ExpectedConditions.elementToBeClickable (star2));
+        star2.click ();
+    }
+
+    public void overallRatingPage2() {
+        wait.until (ExpectedConditions.elementToBeClickable (star3));
+        star3.click ();
+    }
+
+    public void overallRatingPage3() {
+        wait.until (ExpectedConditions.elementToBeClickable (star4));
+        star4.click ();
+    }
+
+    public void overallRatingPage4() {
+        wait.until (ExpectedConditions.elementToBeClickable (star5));
+        star5.click ();
+    }
+
+    public void clickBtnNext1() {
+        wait.until (ExpectedConditions.elementToBeClickable (btnNext1));
+        btnNext1.click ();
+    }
+
+    public void clickBtnCancel1() {
+        wait.until (ExpectedConditions.elementToBeClickable (btnCancel1));
+        btnCancel1.click ();
+    }
+
+    public void usagePeriodePage1() {
+        wait.until (ExpectedConditions.elementToBeClickable (btnlessThan1Week));
+        btnlessThan1Week.click ();
+    }
+
+    public void usagePeriodePage2() {
+        wait.until (ExpectedConditions.elementToBeClickable (btnMoreThan1Week));
+        btnMoreThan1Week.click ();
+    }
+
+    public void usagePeriodePage3() {
+        wait.until (ExpectedConditions.elementToBeClickable (btnMoreThan1Mnth));
+        btnMoreThan1Mnth.click ();
+    }
+
+    public void usagePeriodePage4() {
+        wait.until (ExpectedConditions.elementToBeClickable ( btnMoreThan3Mnth));
+        btnMoreThan3Mnth.click ();
+    }
+
+    public void usagePeriodePage5() {
+        wait.until (ExpectedConditions.elementToBeClickable (btnMoreThan6Mnth));
+        btnMoreThan6Mnth.click ();
+    }
+
+    public void usagePeriodePage6() {
+        wait.until (ExpectedConditions.elementToBeClickable (btnMoreThan1Year));
+        btnMoreThan1Year.click ();
+    }
+
+    public void setCheckBox() {
+        wait.until (ExpectedConditions.elementToBeClickable (checkBox));
+        checkBox.isSelected ();
+    }
+
+    public void clickBtnNext2() {
+        wait.until (ExpectedConditions.elementToBeClickable (btnNext2));
+        btnNext2.click ();
+    }
+
+    public void clickBtnBack() {
+        wait.until (ExpectedConditions.elementToBeClickable (btnBack));
+        btnBack.click ();
+    }
+
+    public void clickBtnCancel2() {
+
+        wait.until (ExpectedConditions.elementToBeClickable (btnCancel2));
+        btnCancel2.click ();
     }
 
 }

@@ -66,6 +66,11 @@
                 <useSystemClassLoader>false</useSystemClassLoader>
             </configuration>
         </plugin>
+        <plugin>
+            <groupId>io.gatling</groupId>
+            <artifactId>gatling-maven-plugin</artifactId>
+            <version>3.0.5</version>
+        </plugin>
     </plugins>
     </build>
 
@@ -193,6 +198,11 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>28.1-jre</version>
+        </dependency>
+        <dependency>
+            <groupId>io.gatling.highcharts</groupId>
+            <artifactId>gatling-charts-highcharts</artifactId>
+            <version>3.3.1</version>
         </dependency>
 
     </dependencies>

@@ -4,17 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
-<<<<<<< HEAD
-=======
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
->>>>>>> elementmacia
 
 public class login {
-	
+
 	public WebDriver driver=null;
+	private WebDriverWait wait;
 
 	@FindBy(css = "input[data-element-id='button-red']")
 	@CacheLookup

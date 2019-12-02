@@ -4,6 +4,7 @@ import AssertObject.assertHome;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -38,9 +39,13 @@ public class homepage {
 	@CacheLookup
 	private WebElement logoHomepage;
 
-	@FindBy(css = "span[id='id_menuburger_home']")
+	@FindBy(id = "id_menuburger_home")
 	@CacheLookup
 	private WebElement hamburger;
+
+//	@FindBy(xpath = "//*[@id=\"id_menuburger_home\"]")
+//	@CacheLookup
+//	private WebElement hamburger;
 
 	@FindBy(id = "id_search_input_field_home")
 	@CacheLookup
@@ -58,11 +63,49 @@ public class homepage {
 	@CacheLookup
 	private WebElement bigAds;
 
-// MENU BURGER
-//    @FindBy(css = "div[class='jsx-3569249403 new-menu-title-2']")
-//    @CacheLookup
-//	private WebElement reviews;
+// MENU HEADER
 
+//    @FindBy(css = "div[class='#id-header > div.jsx-3636492992.main-header-categories > div.jsx-3636492992.main-header-categories-center > a:nth-child(1)']")
+//    @CacheLookup
+//    private WebElement menuSkincare;
+
+//	@FindBy(xpath = "//*[@id=\"id-header\"]/div[2]/div[2]/a[1]")
+//    @CacheLookup
+//    private WebElement menuSkincare;
+
+	@FindBy(css = "#id-header > div.jsx-3636492992.main-header-categories > div.jsx-3636492992.main-header-categories-center > a:nth-child(1)")
+	@CacheLookup
+	private WebElement menuSkincare;
+
+	@FindBy(linkText = "Make Up")
+	@CacheLookup
+	private WebElement menuMakeup;
+
+	@FindBy(linkText = "Body")
+	@CacheLookup
+	private WebElement menuBody;
+
+	@FindBy(linkText = "Hair")
+	@CacheLookup
+	private WebElement menuHair;
+
+	@FindBy(linkText = "Fragrance")
+	@CacheLookup
+	private WebElement menuFragrance;
+
+	@FindBy(linkText = "Nails")
+	@CacheLookup
+	private WebElement menuNails;
+
+	@FindBy(linkText = "Tools")
+	@CacheLookup
+	private WebElement menuTools;
+
+	@FindBy(linkText = "Brand")
+	@CacheLookup
+	private WebElement menuBrand;
+
+// MENU BURGER
 	@FindBy(linkText = "Reviews")
 	@CacheLookup
 	private WebElement reviews;
@@ -88,7 +131,7 @@ public class homepage {
 	private WebElement addReview;
 
 // HOMEPAGE
-	@FindBy(id = "id_image_55237")
+	@FindBy(id = "id_image_42797")
 	@CacheLookup
 	private WebElement editorChoices;
 
@@ -187,12 +230,15 @@ public class homepage {
 		this.driver = driver;
 		this.wait = new WebDriverWait(driver, 30);
 		PageFactory.initElements(driver, this);
-
-
 	}
 
 	public void WaitHamburger() {
 
+//		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		js.executeScript("arguments[0].click();", hamburger);
+//		hamburger.click();
+//		WebDriverWait wait = new WebDriverWait(driver,50);
+//
 //		wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("hamburger")));
 //		hamburger.click();
 
@@ -209,6 +255,10 @@ public class homepage {
 	}
 
 	public void ClickMenuReview() {
+
+//		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		js.executeScript("arguments[0].click();", reviews);
+//		reviews.click();
 
 //		WebElement until = wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("reviews")));
 //		reviews.click();
@@ -246,11 +296,24 @@ public class homepage {
 		act.click(addReview).perform();
 	}
 
-<<<<<<< HEAD
-
-=======
 	public void setLoginHeader() {
 		this.loggedHeader.click();
 	}
->>>>>>> elementmacia
+
+	public void clickProductInHome() {
+		wait.until(ExpectedConditions.elementToBeClickable(editorChoices));
+		editorChoices.click();
+	}
+
+	public void clickMenuSkincare() throws InterruptedException {
+
+//		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		js.executeScript("arguments[0].click();", menuSkincare);
+
+		wait.until (ExpectedConditions.elementToBeClickable (menuSkincare));
+		menuSkincare.click();
+
+	}
+
 }
+

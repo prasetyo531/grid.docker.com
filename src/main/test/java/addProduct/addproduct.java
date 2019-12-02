@@ -51,14 +51,9 @@ public class addproduct extends baseTest {
         logpro.fillpassword().sendKeys(password);
         logpro.clickbuttonlogin();
 
-        System.out.println(driver.getTitle());
-        if (!driver.getTitle().equals("Female Daily - Info, Artikel, Video dan Review Seputar Kecantikan")) {
-            System.out.println("Test Passed");
-        } else {
-            System.out.println("Test Failed");
-            fail("Test Failed");
-        }
-
+        home.WaitHamburger();
+        home.ClickMenuReview();
+        home.HoverClickMenuAddProduct();
         home.WaitHamburger();
 
         home.ClickMenuReview();
@@ -105,7 +100,8 @@ public class addproduct extends baseTest {
         //kiri for numbers of times testcase must execute
         //kanan for no parameter you send
         data = new Object[1][2];
-
+        data[0][0] = "apkprod42";
+        data[0][1] = "test123";
         data[0][0] = "maciahauna";
         data[0][1] = "hanamasa";
 
