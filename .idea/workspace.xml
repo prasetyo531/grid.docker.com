@@ -2,29 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="545bcbc0-9cac-4385-9c4a-b43ab83e63fa" name="Default Changelist" comment="update add review">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pras.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pras.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/categoryList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/categoryList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/homepage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/newestReviews.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/newestReviews.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/productDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/productDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/reviews.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/reviews.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/addProduct/addproduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/addProduct/addproduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/productDetail/addReviewByGuestUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/productDetail/addReviewByGuestUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test/java/productDetail/addReviewThenEdit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/productDetail/addReviewThenEdit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/productDetail/viewByClickBrand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/productDetail/viewByClickBrand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/productDetail/viewByClickBrandOnReviewerForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/productDetail/viewByClickBrandOnReviewerForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Pages/categoryList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/categoryList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Pages/homepage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/homepage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Pages/newestReviews.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/newestReviews.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Pages/productDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/productDetail.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Pages/reviews.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/reviews.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/addProduct/addproduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/addProduct/addproduct.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/productDetail/addReviewByGuestUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/productDetail/addReviewByGuestUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Register/FirstTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Register/SecondTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/productDetail/addReviewThenEdit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/productDetail/addReviewThenEdit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/productDetail/viewByClickBrand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/productDetail/viewByClickBrand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/productDetail/viewByClickBrandOnReviewerForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/productDetail/viewByClickBrandOnReviewerForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,9 +37,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../java-selenium" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.scala.compiler.ScalaCompileServerForm" />

@@ -6,6 +6,7 @@ import Pages.*;
 import org.apache.poi.ss.formula.functions.T;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.awt.*;
