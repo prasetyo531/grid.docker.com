@@ -162,7 +162,7 @@ public class addReviewThenEdit extends baseTest {
         reviews.clickBtnBack ();
         System.out.println(driver.getTitle ());
         if (!driver.getTitle ().equals("How many stars will you give to this product ?")) {
-            System.out.println("Test Passed - Back to page How many stars will you give to this product ?");
+            System.out.println("Test Passed - Back to page how many stars will you give to this product ?");
         } else {
             System.out.println("Test Failed");
             fail("Test Failed");
@@ -174,7 +174,7 @@ public class addReviewThenEdit extends baseTest {
         reviews.clickBtnNext1 ();
         System.out.println(driver.getTitle ());
         if (!driver.getTitle ().equals("How long have you used it?")) {
-            System.out.println("Test Passed - Back to page How long have you used it?");
+            System.out.println("Test Passed - Back to page how long have you used it?");
         } else {
             System.out.println("Test Failed");
             fail("Test Failed");
@@ -183,11 +183,16 @@ public class addReviewThenEdit extends baseTest {
         reviews.clickBtnNext2 ();
         System.out.println(driver.getTitle ());
         if (!driver.getTitle ().equals("Where did you get the product?")) {
-            System.out.println("Test Passed - Show page Where did you get the product?");
+            System.out.println("Test Passed - Show page where did you get the product?");
         } else {
             System.out.println("Test Failed");
             fail("Test Failed");
         }
+
+        reviews.tapMenuOffline ();
+        reviews.tapFlashSale ();
+
+
 
 
     }

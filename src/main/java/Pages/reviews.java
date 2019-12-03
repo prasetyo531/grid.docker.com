@@ -92,6 +92,69 @@ public class reviews {
     @CacheLookup
     private WebElement btnCancel2;
 
+// PURCHASE POINTS
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/span[1]")
+    @CacheLookup
+    private WebElement menuOnline;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[1]/p")
+    @CacheLookup
+    private WebElement fdFlashsale;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[3]/p")
+    @CacheLookup
+    private WebElement brandWeb;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[5]/p")
+    @CacheLookup
+    private WebElement FDTryNReview;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/span[2]")
+    @CacheLookup
+    private WebElement menuOffline;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[1]/p")
+    @CacheLookup
+    private WebElement XbeautyFD;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[2]/p")
+    @CacheLookup
+    private WebElement brandStore;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[6]/p")
+    @CacheLookup
+    private WebElement market;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/span[3]")
+    @CacheLookup
+    private WebElement menuOthers;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[1]/p")
+    @CacheLookup
+    private WebElement gift;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[2]/p")
+    @CacheLookup
+    private WebElement sample;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[3]/p")
+    @CacheLookup
+    private WebElement PRPackage;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[2]/button[2]")
+    @CacheLookup
+    private WebElement btnNext3;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[2]/button[1]")
+    @CacheLookup
+    private WebElement btnBack1;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/p")
+    @CacheLookup
+    private WebElement btnCancel3;
+
+
 
     public reviews(WebDriver driver) {
         // TODO Auto-generated constructor stub
@@ -177,7 +240,14 @@ public class reviews {
 
     public void setCheckBox() {
         wait.until (ExpectedConditions.elementToBeClickable (checkBox));
-        checkBox.isSelected ();
+        checkBox.click ();
+
+        if (!checkBox.isSelected ()) {
+            System.out.println ("Checkbox is Toggled On");
+        }
+        else {
+            System.out.println ("Checkbox is Toggled Off");
+        }
     }
 
     public void clickBtnNext2() {
@@ -194,6 +264,21 @@ public class reviews {
 
         wait.until (ExpectedConditions.elementToBeClickable (btnCancel2));
         btnCancel2.click ();
+    }
+
+    public void tapMenuOffline() {
+        wait.until (ExpectedConditions.elementToBeClickable (menuOffline));
+        menuOffline.click ();
+    }
+
+    public void tapFlashSale() {
+        wait.until (ExpectedConditions.elementToBeClickable (fdFlashsale));
+        fdFlashsale.click ();
+    }
+
+    public void clickBtnNext3() {
+        wait.until (ExpectedConditions.elementToBeClickable (btnNext3));
+       btnNext3.click ();
     }
 
 }

@@ -1,32 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="545bcbc0-9cac-4385-9c4a-b43ab83e63fa" name="Default Changelist" comment="update add review">
+    <list default="true" id="545bcbc0-9cac-4385-9c4a-b43ab83e63fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pras.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pras.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/categoryList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/categoryList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/homepage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/newestReviews.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/newestReviews.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/productDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/productDetail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pages/reviews.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/reviews.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/addProduct/addproduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/addProduct/addproduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/productDetail/addReviewByGuestUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/productDetail/addReviewByGuestUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test/java/productDetail/addReviewThenEdit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/productDetail/addReviewThenEdit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/productDetail/viewByClickBrand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/productDetail/viewByClickBrand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/productDetail/viewByClickBrandOnReviewerForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/productDetail/viewByClickBrandOnReviewerForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Pages/categoryList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/categoryList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Pages/homepage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/homepage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Pages/newestReviews.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/newestReviews.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Pages/productDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/productDetail.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Pages/reviews.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/reviews.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/addProduct/addproduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/addProduct/addproduct.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/productDetail/addReviewByGuestUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/productDetail/addReviewByGuestUser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/productDetail/addReviewThenEdit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/productDetail/addReviewThenEdit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/productDetail/viewByClickBrand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/productDetail/viewByClickBrand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/productDetail/viewByClickBrandOnReviewerForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/productDetail/viewByClickBrandOnReviewerForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,6 +33,11 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -73,18 +59,6 @@
       <recent name="C:\grid\src\main\test" />
       <recent name="C:\grid\src\main\java" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="TestNG.C:/grid/testng.xml">
     <configuration name="C:/grid/pras.xml" type="TestNG" temporary="true" nameIsGenerated="true">
@@ -167,6 +141,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -185,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574914484927</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update add review">
+      <created>1574940625062</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1574940625062</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -205,5 +198,35 @@
     <MESSAGE value="update" />
     <MESSAGE value="update add review" />
     <option name="LAST_COMMIT_MESSAGE" value="update add review" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1575283314434">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1575283314434" />
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1575287669622">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1575287669622" />
+    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1575287669622">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1575287669622" />
+    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1575287669622">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1575287669622" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1575287669622">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1575287669622" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1575344668436">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1575344668436" />
+    <state x="473" y="203" key="git4idea.merge.GitPullDialog" timestamp="1575344681172">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="473" y="203" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1575344681172" />
   </component>
 </project>
