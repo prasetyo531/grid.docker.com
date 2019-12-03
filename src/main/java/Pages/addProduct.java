@@ -219,19 +219,6 @@ public class addProduct {
            robot.keyPress(KeyEvent.VK_ENTER);
            robot.keyRelease(KeyEvent.VK_ENTER);
 
-//           robot.delay(250);
-//           robot.keyPress(KeyEvent.VK_ENTER);
-//           robot.keyRelease(KeyEvent.VK_ENTER);
-//           robot.keyPress(KeyEvent.VK_CONTROL);
-//           robot.keyPress(KeyEvent.VK_V);
-//           robot.keyRelease(KeyEvent.VK_V);
-//           robot.keyRelease(KeyEvent.VK_CONTROL);
-//           robot.keyPress(KeyEvent.VK_ENTER);
-//           robot.delay(150);
-//           robot.keyRelease(KeyEvent.VK_ENTER);
-//            //uploadFilewithRobot(filePath);
-
-
            sleep(2000);
            //WebElement trycrop = driver.findElementByCssSelector("#modal-crop-showed > div > div.ReactCrop.ReactCrop--fixed-aspect > img");
            WebElement trycrop = driver.findElement(By.cssSelector("class['ReactCrop__crop-selection']"));
@@ -245,17 +232,6 @@ public class addProduct {
            wait.until(ExpectedConditions.elementToBeClickable(buttonCrop));
            buttonCrop.click();
 
-//           //Move to the desired co-ordinates of the image element, In the code below I am staring from bottom left corner of the image
-//           crop.moveToElement(trycrop.findCrop(buttonCrop),0,0);
-//
-//           //locate the co-ordinates of image you want to move by and perform the click   and hold which mimics the crop action
-//           crop.clickAndHold().moveByOffset(196,238).release().build().perform();
-//
-//           buttonCrop.cropPicture().click();
-//
-//           wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("crop")));
-//           wait.until(ExpectedConditions.elementToBeClickable(buttonCrop));
-//           buttonCrop.click();
         }
         
 //    public void imagebyURL() {

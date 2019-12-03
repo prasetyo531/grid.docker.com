@@ -85,19 +85,12 @@ public class productDetail {
     public void clickBrandName() {
 
         WebElement brandName = driver.findElement(By.xpath ("//*[@id=\"id-product-details\"]/div[2]/div[2]/div[1]/div[1]/a/h2"));
-
-//        JavascriptExecutor js = (JavascriptExecutor) driver;
-//        js.executeScript("arguments[0].click();", brandName);
-
         wait.until(ExpectedConditions.elementToBeClickable(brandName));
         brandName.click();
 
     }
 
     public void clickAddReview() {
-
-//        JavascriptExecutor js = (JavascriptExecutor) driver;
-//        js.executeScript("arguments[0].click();", btnAddReview);
 
         wait.until (ExpectedConditions.elementToBeClickable (btnAddReview));
         btnAddReview.click ();

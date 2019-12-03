@@ -1,10 +1,7 @@
 package Pages;
 
 import AssertObject.assertHome;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -13,7 +10,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.w3c.dom.NodeList;
 
 public class reviews {
     private WebDriver driver;
@@ -102,9 +101,17 @@ public class reviews {
     @CacheLookup
     private WebElement fdFlashsale;
 
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[2]/div")
+    @CacheLookup
+    private WebElement ecommerce;
+
     @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[3]/p")
     @CacheLookup
     private WebElement brandWeb;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[4]/div")
+    @CacheLookup
+    private WebElement sosmed;
 
     @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[5]/p")
     @CacheLookup
@@ -122,9 +129,25 @@ public class reviews {
     @CacheLookup
     private WebElement brandStore;
 
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[3]/div/p")
+    @CacheLookup
+    private WebElement multiStore;
+
+//    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[4]/div")
+//    @CacheLookup
+//    private WebElement drugstore;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[5]/div")
+    @CacheLookup
+    private WebElement superMarket;
+
     @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[6]/p")
     @CacheLookup
-    private WebElement market;
+    private WebElement tradMarket;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[7]/div")
+    @CacheLookup
+    private WebElement directSelling;
 
     @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/span[3]")
     @CacheLookup
@@ -142,6 +165,10 @@ public class reviews {
     @CacheLookup
     private WebElement PRPackage;
 
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[4]/div/input")
+    @CacheLookup
+    private WebElement NoneOfAbove;
+
     @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[2]/button[2]")
     @CacheLookup
     private WebElement btnNext3;
@@ -150,9 +177,19 @@ public class reviews {
     @CacheLookup
     private WebElement btnBack1;
 
-    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/p")
+// RECOMMENDATION
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/i[1]")
     @CacheLookup
-    private WebElement btnCancel3;
+    private WebElement btnYes;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/i[2]")
+    @CacheLookup
+    private WebElement btnNo;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[2]/div[4]")
+    @CacheLookup
+    private WebElement fieldReview;
 
 
 
@@ -266,19 +303,237 @@ public class reviews {
         btnCancel2.click ();
     }
 
+    public void tapMenuOnline() {
+        wait.until (ExpectedConditions.elementToBeClickable (menuOnline));
+        menuOnline.click ();
+    }
+
+    public void selectFlashSale() {
+        wait.until (ExpectedConditions.elementToBeClickable (fdFlashsale));
+        fdFlashsale.click ();
+    }
+
+    public void selecteCommerce() {
+
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].click();", ecommerce);
+
+        Actions actions = new Actions(driver);
+        actions.moveToElement(ecommerce);
+        actions.click();
+        actions.sendKeys("Tokopedia", Keys.ENTER);
+        actions.build().perform();
+
+        if (!ecommerce.isSelected ()) {
+            System.out.println ("Tokopedia Selected");
+        }
+        else {
+            System.out.println ("Tokopedia Unselected");
+        }
+    }
+
+    public void selectBrandWeb() {
+        wait.until (ExpectedConditions.elementToBeClickable (brandWeb));
+        brandWeb.click ();
+    }
+
+    public void selectSosmed() {
+
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].click();", sosmed);
+
+        Actions actions = new Actions(driver);
+        actions.moveToElement(sosmed);
+        actions.click();
+        actions.sendKeys("Instagram", Keys.ENTER);
+        actions.build().perform();
+
+        if (!sosmed.isSelected ()) {
+            System.out.println ("Instagram Selected");
+        }
+        else {
+            System.out.println ("Instagram Unselected");
+        }
+    }
+
+    public void selectFDTryNReview() {
+        wait.until (ExpectedConditions.elementToBeClickable (FDTryNReview));
+        FDTryNReview.click ();
+    }
+
     public void tapMenuOffline() {
         wait.until (ExpectedConditions.elementToBeClickable (menuOffline));
         menuOffline.click ();
     }
 
-    public void tapFlashSale() {
-        wait.until (ExpectedConditions.elementToBeClickable (fdFlashsale));
-        fdFlashsale.click ();
+    public void selectXBeautyFD() {
+        wait.until (ExpectedConditions.elementToBeClickable (XbeautyFD));
+        XbeautyFD.click ();
+    }
+
+    public void selectBrandStore() {
+        wait.until (ExpectedConditions.elementToBeClickable (brandStore));
+        brandStore.click ();
+    }
+
+    public void selectMultiBrand() {
+
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].click();", multiStore);
+
+        Actions actions = new Actions(driver);
+        actions.moveToElement(multiStore);
+        actions.click();
+        actions.sendKeys("Test", Keys.ENTER);
+        actions.build().perform();
+
+        if (!multiStore.isSelected ()) {
+            System.out.println ("Matahari Selected");
+        }
+        else {
+            System.out.println ("Matahari Unselected");
+        }
+    }
+
+    public void selectDrugstore() {
+
+        WebElement drugstore = driver.findElement (By.xpath ("//*[@id=\"dropdown3\"]"));
+
+        Select selectDrugstore = new Select(drugstore);
+        selectDrugstore.selectByValue ("Watson");
+
+//        JavascriptExecutor js = (JavascriptExecutor)driver;
+//        js.executeScript("arguments[0].click();", drugstore);
+//
+//        Actions actions = new Actions(driver);
+//        actions.moveToElement(drugstore);
+//        actions.click();
+//        actions.sendKeys("Watson", Keys.ENTER);
+//        actions.build().perform();
+//
+//        if (!drugstore.isSelected ()) {
+//            System.out.println ("Watson Selected");
+//        }
+//        else {
+//            System.out.println ("Watson Unselected");
+//        }
+    }
+
+    public void selectSupermarket() {
+
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].click();", superMarket);
+
+        Actions actions = new Actions(driver);
+        actions.moveToElement(superMarket);
+        actions.click();
+        actions.sendKeys("Alfamart", Keys.ENTER);
+        actions.build().perform();
+
+        if (!superMarket.isSelected ()) {
+            System.out.println ("Alfamart Selected");
+        }
+        else {
+            System.out.println ("Alfamart Unselected");
+        }
+    }
+
+    public void selectTraditionalMarket() {
+        wait.until (ExpectedConditions.elementToBeClickable (tradMarket));
+        tradMarket.click ();
+    }
+
+    public void selectDirectSelling() {
+
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].click();", directSelling);
+
+        Actions actions = new Actions(driver);
+        actions.moveToElement(directSelling);
+        actions.click();
+        actions.sendKeys("Oriflame", Keys.ENTER);
+        actions.build().perform();
+
+        if (!directSelling.isSelected ()) {
+            System.out.println ("Oriflame Selected");
+        }
+        else {
+            System.out.println ("Oriflame Unselected");
+        }
+    }
+
+    public void tapMenuOthers() {
+        wait.until (ExpectedConditions.elementToBeClickable (menuOthers));
+        menuOthers.click ();
+    }
+
+    public void selectGift() {
+        wait.until (ExpectedConditions.elementToBeClickable (gift));
+        gift.click ();
+    }
+
+    public void selectSampel() {
+        wait.until (ExpectedConditions.elementToBeClickable (sample));
+        sample.click ();
+    }
+
+    public void selectPRPackage() {
+        wait.until (ExpectedConditions.elementToBeClickable (PRPackage));
+        PRPackage.click ();
+    }
+
+    public void selectNoneOfAbove() {
+
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].click();", NoneOfAbove );
+
+        Actions actions = new Actions(driver);
+        actions.moveToElement(NoneOfAbove);
+        actions.click();
+        actions.sendKeys("Test", Keys.ENTER);
+        actions.build().perform();
+
+        if (!NoneOfAbove.isSelected ()) {
+            System.out.println ("None of above Selected");
+        }
+        else {
+            System.out.println ("None of above Unselected");
+        }
     }
 
     public void clickBtnNext3() {
         wait.until (ExpectedConditions.elementToBeClickable (btnNext3));
        btnNext3.click ();
+    }
+
+    public void clickBtnYes() {
+
+        wait.until (ExpectedConditions.elementToBeClickable (btnYes));
+        btnYes.click ();
+
+        if (!btnYes.isSelected ()) {
+            System.out.println ("User Recommend The Product ");
+        }
+        else {
+            System.out.println ("No");
+        }
+    }
+
+    public void clickBtnNo() {
+
+        wait.until (ExpectedConditions.elementToBeClickable (btnNo));
+        btnNo.click ();
+
+        if (!btnYes.isSelected ()) {
+            System.out.println ("User Not Recommend The Product ");
+        }
+        else {
+            System.out.println ("Yes");
+        }
+    }
+
+    public void inputReview() {
+       fieldReview.sendKeys("Cushion pertama aku! suka sih, shade caramelnya cocok di kulitku yang mendium, untuk coveragenya lumayan oke sih. Biasanya masih aku timpa bedak, biar agak mate. Trus makenya agak di tepuk pelan pelan kalau enggak nanti kaya ketebalan gitu. Overall aku suka produknya. Apalagi harganya yang masih super terjangkau di bandingkan cushion yang lain.");
     }
 
 }

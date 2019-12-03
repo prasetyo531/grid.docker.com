@@ -190,7 +190,28 @@ public class addReviewThenEdit extends baseTest {
         }
 
         reviews.tapMenuOffline ();
-        reviews.tapFlashSale ();
+//        reviews.selectBrandStore ();
+//        reviews.selectMultiBrand ();
+        reviews.selectDrugstore ();
+//        reviews.selectSupermarket ();
+//        reviews.selectDirectSelling ();
+//        reviews.tapMenuOnline ();
+//        reviews.selectSosmed ();
+//        reviews.selecteCommerce ();
+//        reviews.tapMenuOthers ();
+//        reviews.selectNoneOfAbove ();
+
+        reviews.clickBtnNext3 ();
+        System.out.println(driver.getTitle ());
+        if (!driver.getTitle ().equals("Would you recommend this product?")) {
+            System.out.println("Test Passed - Show page Recommendation");
+        } else {
+            System.out.println("Test Failed");
+            fail("Test Failed");
+        }
+
+       reviews.clickBtnYes ();
+//        reviews.inputReview ();
 
 
 
