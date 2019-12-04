@@ -14,6 +14,10 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.w3c.dom.NodeList;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ExecutorService;
+
 public class reviews {
     private WebDriver driver;
     private WebDriverWait wait;
@@ -133,9 +137,9 @@ public class reviews {
     @CacheLookup
     private WebElement multiStore;
 
-//    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[4]/div")
-//    @CacheLookup
-//    private WebElement drugstore;
+    @FindBy(id = "dropdown3")
+    @CacheLookup
+    private WebElement drugstore;
 
     @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[5]/div")
     @CacheLookup
@@ -187,7 +191,7 @@ public class reviews {
     @CacheLookup
     private WebElement btnNo;
 
-    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[2]/div[4]")
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[2]/div[4]/textarea")
     @CacheLookup
     private WebElement fieldReview;
 
@@ -378,36 +382,46 @@ public class reviews {
 
     public void selectMultiBrand() {
 
-        JavascriptExecutor js = (JavascriptExecutor)driver;
-        js.executeScript("arguments[0].click();", multiStore);
+        wait.until (ExpectedConditions.elementToBeClickable (multiStore));
+        multiStore.click ();
+
+        WebElement sogo = driver.findElement (By.xpath ("//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[3]/div/div/div/p[1]"));
 
         Actions actions = new Actions(driver);
-        actions.moveToElement(multiStore);
-        actions.click();
-        actions.sendKeys("Test", Keys.ENTER);
+        actions.moveToElement(sogo);        actions.click();
+        actions.sendKeys(Keys.chord (Keys.DOWN, Keys.ENTER));
         actions.build().perform();
 
         if (!multiStore.isSelected ()) {
-            System.out.println ("Matahari Selected");
+            System.out.println ("SOGO Selected");
         }
         else {
-            System.out.println ("Matahari Unselected");
+            System.out.println ("SOGO Unselected");
         }
     }
 
     public void selectDrugstore() {
 
-        WebElement drugstore = driver.findElement (By.xpath ("//*[@id=\"dropdown3\"]"));
+        Select listDrugstore = new Select(drugstore);
+        listDrugstore.selectByValue ("Guardian");
 
-        Select selectDrugstore = new Select(drugstore);
-        selectDrugstore.selectByValue ("Watson");
+        Actions actions = new Actions(driver);
+        actions.moveToElement(drugstore);
+        actions.click();
 
 //        JavascriptExecutor js = (JavascriptExecutor)driver;
 //        js.executeScript("arguments[0].click();", drugstore);
+
+
+//        WebElement drugstore = driver.findElement (By.xpath ("//*[@id=\"dropdown3\"]"));
+
 //
-//        Actions actions = new Actions(driver);
-//        actions.moveToElement(drugstore);
-//        actions.click();
+//        List <WebElement> listDrugstore = (List<WebElement>) driver.findElement (By.xpath ("//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[4]/div/div/div"));
+//        for(WebElement option : listDrugstore) {
+//            if (option.getText().equals("Watson")) {
+//                option.click();
+            }
+
 //        actions.sendKeys("Watson", Keys.ENTER);
 //        actions.build().perform();
 //
@@ -417,7 +431,7 @@ public class reviews {
 //        else {
 //            System.out.println ("Watson Unselected");
 //        }
-    }
+//    }
 
     public void selectSupermarket() {
 
@@ -427,7 +441,7 @@ public class reviews {
         Actions actions = new Actions(driver);
         actions.moveToElement(superMarket);
         actions.click();
-        actions.sendKeys("Alfamart", Keys.ENTER);
+//        actions.sendKeys("Alfamart", Keys.ENTER);
         actions.build().perform();
 
         if (!superMarket.isSelected ()) {
@@ -533,7 +547,7 @@ public class reviews {
     }
 
     public void inputReview() {
-       fieldReview.sendKeys("Cushion pertama aku! suka sih, shade caramelnya cocok di kulitku yang mendium, untuk coveragenya lumayan oke sih. Biasanya masih aku timpa bedak, biar agak mate. Trus makenya agak di tepuk pelan pelan kalau enggak nanti kaya ketebalan gitu. Overall aku suka produknya. Apalagi harganya yang masih super terjangkau di bandingkan cushion yang lain.");
+        fieldReview.sendKeys("Awal beli ini karena iseng pingin nyoba pelembab lain, walaupun harganya  terjangkau, productnya Emina ini kualitasnya tetap bagus. Pertama kali pemakaian, aku agak kaget ya karena teksturnya yang cair. Tapi pas dipakai jadinya cepet banget ngeresap ke kulit. Cukup ngelembabin kulit aku yang kering. Pelembab ini termaksud tipe yang gada whitecasnya, jadi gak ngebuat muka terlihat lebih cerah. Overall aku suka sama productnya, tapi kalo untuk repurchase sepertinya ingin coba product yang lain juga :)");
     }
 
 }

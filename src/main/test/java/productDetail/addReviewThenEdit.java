@@ -191,8 +191,8 @@ public class addReviewThenEdit extends baseTest {
 
         reviews.tapMenuOffline ();
 //        reviews.selectBrandStore ();
-//        reviews.selectMultiBrand ();
-        reviews.selectDrugstore ();
+        reviews.selectMultiBrand ();
+//        reviews.selectDrugstore ();
 //        reviews.selectSupermarket ();
 //        reviews.selectDirectSelling ();
 //        reviews.tapMenuOnline ();
@@ -210,8 +210,9 @@ public class addReviewThenEdit extends baseTest {
             fail("Test Failed");
         }
 
-       reviews.clickBtnYes ();
-//        reviews.inputReview ();
+       // reviews.clickBtnYes ();
+       reviews.clickBtnNo ();
+       reviews.inputReview ();
 
 
 
