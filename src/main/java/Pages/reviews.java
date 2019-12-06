@@ -105,7 +105,7 @@ public class reviews {
     @CacheLookup
     private WebElement fdFlashsale;
 
-    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[2]/div")
+    @FindBy(id = "dropdown1")
     @CacheLookup
     private WebElement ecommerce;
 
@@ -113,7 +113,7 @@ public class reviews {
     @CacheLookup
     private WebElement brandWeb;
 
-    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[4]/div")
+    @FindBy(id = "dropdown3")
     @CacheLookup
     private WebElement sosmed;
 
@@ -133,7 +133,7 @@ public class reviews {
     @CacheLookup
     private WebElement brandStore;
 
-    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[3]/div/p")
+    @FindBy(id = "dropdown2")
     @CacheLookup
     private WebElement multiStore;
 
@@ -141,7 +141,7 @@ public class reviews {
     @CacheLookup
     private WebElement drugstore;
 
-    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[5]/div")
+    @FindBy(id= "dropdown4")
     @CacheLookup
     private WebElement superMarket;
 
@@ -149,7 +149,7 @@ public class reviews {
     @CacheLookup
     private WebElement tradMarket;
 
-    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[7]/div")
+    @FindBy(id = "dropdown6")
     @CacheLookup
     private WebElement directSelling;
 
@@ -169,9 +169,9 @@ public class reviews {
     @CacheLookup
     private WebElement PRPackage;
 
-    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[4]/div/input")
+    @FindBy(id = "dropdown3")
     @CacheLookup
-    private WebElement NoneOfAbove;
+    private WebElement noneOfAbove;
 
     @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[2]/button[2]")
     @CacheLookup
@@ -194,6 +194,14 @@ public class reviews {
     @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[2]/div[4]/textarea")
     @CacheLookup
     private WebElement fieldReview;
+
+    @FindBy(xpath = "//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[3]/button[2]")
+    @CacheLookup
+    private WebElement btnSubmit;
+
+    @FindBy(xpath = "/html/body/div[6]/div/div/button")
+    @CacheLookup
+    private WebElement btnViewReview;
 
 
 
@@ -265,7 +273,7 @@ public class reviews {
     }
 
     public void usagePeriodePage4() {
-        wait.until (ExpectedConditions.elementToBeClickable ( btnMoreThan3Mnth));
+        wait.until (ExpectedConditions.elementToBeClickable (btnMoreThan3Mnth));
         btnMoreThan3Mnth.click ();
     }
 
@@ -319,13 +327,15 @@ public class reviews {
 
     public void selecteCommerce() {
 
-        JavascriptExecutor js = (JavascriptExecutor)driver;
-        js.executeScript("arguments[0].click();", ecommerce);
+        wait.until (ExpectedConditions.elementToBeClickable (ecommerce));
+        ecommerce.click ();
+
+        WebElement tokopedia = driver.findElement (By.xpath ("//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[2]/div/div/div/p[1]"));
 
         Actions actions = new Actions(driver);
-        actions.moveToElement(ecommerce);
+        actions.moveToElement(tokopedia);
         actions.click();
-        actions.sendKeys("Tokopedia", Keys.ENTER);
+        actions.sendKeys(Keys.chord (Keys.ENTER));
         actions.build().perform();
 
         if (!ecommerce.isSelected ()) {
@@ -343,13 +353,15 @@ public class reviews {
 
     public void selectSosmed() {
 
-        JavascriptExecutor js = (JavascriptExecutor)driver;
-        js.executeScript("arguments[0].click();", sosmed);
+        wait.until (ExpectedConditions.elementToBeClickable (sosmed));
+        sosmed.click ();
+
+        WebElement instagram = driver.findElement (By.xpath ("//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[4]/div/div/div/p[1]"));
 
         Actions actions = new Actions(driver);
-        actions.moveToElement(sosmed);
+        actions.moveToElement(instagram);
         actions.click();
-        actions.sendKeys("Instagram", Keys.ENTER);
+        actions.sendKeys(Keys.chord (Keys.ENTER));
         actions.build().perform();
 
         if (!sosmed.isSelected ()) {
@@ -388,8 +400,9 @@ public class reviews {
         WebElement sogo = driver.findElement (By.xpath ("//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[3]/div/div/div/p[1]"));
 
         Actions actions = new Actions(driver);
-        actions.moveToElement(sogo);        actions.click();
-        actions.sendKeys(Keys.chord (Keys.DOWN, Keys.ENTER));
+        actions.moveToElement(sogo);
+        actions.click();
+        actions.sendKeys(Keys.chord (Keys.ENTER));
         actions.build().perform();
 
         if (!multiStore.isSelected ()) {
@@ -402,53 +415,45 @@ public class reviews {
 
     public void selectDrugstore() {
 
-        Select listDrugstore = new Select(drugstore);
-        listDrugstore.selectByValue ("Guardian");
+        wait.until (ExpectedConditions.elementToBeClickable (drugstore));
+        drugstore.click ();
 
+//        WebElement avecca = driver.findElement (By.xpath ("//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[4]/div/div/div/p[5]"));
+        WebElement guardian = driver.findElement (By.xpath ("//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[4]/div/div/div/p[1]"));
+
+//        Actions actions = new Actions(driver);
         Actions actions = new Actions(driver);
-        actions.moveToElement(drugstore);
+        actions.moveToElement(guardian);
         actions.click();
+        actions.sendKeys(Keys.chord (Keys.ENTER));
+        actions.build().perform();
 
-//        JavascriptExecutor js = (JavascriptExecutor)driver;
-//        js.executeScript("arguments[0].click();", drugstore);
-
-
-//        WebElement drugstore = driver.findElement (By.xpath ("//*[@id=\"dropdown3\"]"));
-
-//
-//        List <WebElement> listDrugstore = (List<WebElement>) driver.findElement (By.xpath ("//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[4]/div/div/div"));
-//        for(WebElement option : listDrugstore) {
-//            if (option.getText().equals("Watson")) {
-//                option.click();
-            }
-
-//        actions.sendKeys("Watson", Keys.ENTER);
-//        actions.build().perform();
-//
-//        if (!drugstore.isSelected ()) {
-//            System.out.println ("Watson Selected");
-//        }
-//        else {
-//            System.out.println ("Watson Unselected");
-//        }
-//    }
+        if (!drugstore.isSelected ()) {
+            System.out.println ("Avecca Selected");
+        }
+        else {
+            System.out.println ("Avecca Unselected");
+        }
+    }
 
     public void selectSupermarket() {
 
-        JavascriptExecutor js = (JavascriptExecutor)driver;
-        js.executeScript("arguments[0].click();", superMarket);
+        wait.until (ExpectedConditions.elementToBeClickable (superMarket));
+        superMarket.click ();
+
+        WebElement lottemart = driver.findElement (By.xpath ("//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[5]/div/div/div/p[5]"));
 
         Actions actions = new Actions(driver);
-        actions.moveToElement(superMarket);
+        actions.moveToElement(lottemart);
         actions.click();
-//        actions.sendKeys("Alfamart", Keys.ENTER);
+        actions.sendKeys(Keys.chord (Keys.ENTER));
         actions.build().perform();
 
-        if (!superMarket.isSelected ()) {
-            System.out.println ("Alfamart Selected");
+        if (!drugstore.isSelected ()) {
+            System.out.println ("Lottemart Selected");
         }
         else {
-            System.out.println ("Alfamart Unselected");
+            System.out.println ("Lottemart Unselected");
         }
     }
 
@@ -459,16 +464,18 @@ public class reviews {
 
     public void selectDirectSelling() {
 
-        JavascriptExecutor js = (JavascriptExecutor)driver;
-        js.executeScript("arguments[0].click();", directSelling);
+        wait.until (ExpectedConditions.elementToBeClickable (directSelling));
+        directSelling.click ();
+
+        WebElement oriflame = driver.findElement (By.xpath ("//*[@id=\"top-page\"]/div[2]/div/div[1]/div[2]/div[1]/div[7]/div/div/div/p[1]"));
 
         Actions actions = new Actions(driver);
-        actions.moveToElement(directSelling);
+        actions.moveToElement(oriflame);
         actions.click();
-        actions.sendKeys("Oriflame", Keys.ENTER);
+        actions.sendKeys(Keys.chord (Keys.ENTER));
         actions.build().perform();
 
-        if (!directSelling.isSelected ()) {
+        if (!drugstore.isSelected ()) {
             System.out.println ("Oriflame Selected");
         }
         else {
@@ -498,20 +505,20 @@ public class reviews {
 
     public void selectNoneOfAbove() {
 
-        JavascriptExecutor js = (JavascriptExecutor)driver;
-        js.executeScript("arguments[0].click();", NoneOfAbove );
+        wait.until (ExpectedConditions.elementToBeClickable (noneOfAbove));
+        PRPackage.click ();
 
         Actions actions = new Actions(driver);
-        actions.moveToElement(NoneOfAbove);
+        actions.moveToElement(noneOfAbove);
         actions.click();
-        actions.sendKeys("Test", Keys.ENTER);
+        actions.sendKeys("BeautyTest", Keys.ENTER);
         actions.build().perform();
 
-        if (!NoneOfAbove.isSelected ()) {
-            System.out.println ("None of above Selected");
+        if (!noneOfAbove.isSelected ()) {
+            System.out.println ("BeautyTest Selected");
         }
         else {
-            System.out.println ("None of above Unselected");
+            System.out.println ("BeautyTest Unselected");
         }
     }
 
@@ -547,7 +554,19 @@ public class reviews {
     }
 
     public void inputReview() {
-        fieldReview.sendKeys("Awal beli ini karena iseng pingin nyoba pelembab lain, walaupun harganya  terjangkau, productnya Emina ini kualitasnya tetap bagus. Pertama kali pemakaian, aku agak kaget ya karena teksturnya yang cair. Tapi pas dipakai jadinya cepet banget ngeresap ke kulit. Cukup ngelembabin kulit aku yang kering. Pelembab ini termaksud tipe yang gada whitecasnya, jadi gak ngebuat muka terlihat lebih cerah. Overall aku suka sama productnya, tapi kalo untuk repurchase sepertinya ingin coba product yang lain juga :)");
+        fieldReview.sendKeys("Awal beli ini karena iseng pingin nyoba pelembab lain, walaupun harganya terjangkau, productnya Emina ini kualitasnya tetap bagus. Pertama kali pemakaian, aku agak kaget ya karena teksturnya yang cair baget. Tapi pas dipakai jadinya cepet ngeresap ke kulit. Cukup ngelembabin kulit aku yang cenderung kering. Pelembab ini termaksud tipe yang gada whitecasnya, jadi gak ngebuat muka terlihat lebih cerah. Overall aku suka sama productnya, tapi kalo untuk repurchase sepertinya ingin coba product yang lain juga :)");
     }
+
+    public void submitReview() {
+        wait.until (ExpectedConditions.elementToBeClickable (btnSubmit));
+        btnSubmit.click ();
+    }
+
+    public void clickbtnViewReview() {
+        wait.until (ExpectedConditions.elementToBeClickable (btnViewReview));
+        btnViewReview.click ();
+    }
+
+
 
 }
