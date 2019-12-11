@@ -33,7 +33,7 @@ public class addReviewThenEdit extends baseTest {
         productDetail product = new productDetail (driver);
         reviews reviews = new reviews (driver);
 
-        driver.get ("https://femaledaily.com/");
+        driver.get ("https://femaledaily.net/");
         driver.manage ().window ().maximize ();
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -48,7 +48,8 @@ public class addReviewThenEdit extends baseTest {
         home.clickMenuSkincare();
 
         catList.clickListLotion();
-        catList.HoverCLickProduct1();
+        catList.HoverCLickProduct2 ();
+//        catList.HoverCLickProduct1();
 
         Thread.sleep (60);
 
@@ -198,9 +199,9 @@ public class addReviewThenEdit extends baseTest {
 
         reviews.tapMenuOffline ();
 //        reviews.selectXBeautyFD ();
-//        reviews.selectBrandStore ();
+        reviews.selectBrandStore ();
 //        reviews.selectMultiBrand ();
-        reviews.selectDrugstore ();
+//        reviews.selectDrugstore ();
 //        reviews.selectSupermarket ();
 //        reviews.selectTraditionalMarket ();
 //        reviews.selectDirectSelling ();
@@ -236,6 +237,7 @@ public class addReviewThenEdit extends baseTest {
         reviews.clickbtnViewReview ();
 
 
+
     }
     @DataProvider
     public static Object[][] getDataRegister () {
@@ -245,8 +247,8 @@ public class addReviewThenEdit extends baseTest {
         //kanan for no parameter you send
         data = new Object[1][2];
 
-        data[0][0] = "maciahauna";
-        data[0][1] = "hanamasa";
+        data[0][0] = "maciatest";
+        data[0][1] = "test123";
 
         return data;
     }

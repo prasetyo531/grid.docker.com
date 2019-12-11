@@ -92,7 +92,10 @@ public class productDetail {
 
     public void clickAddReview() {
 
-        wait.until (ExpectedConditions.elementToBeClickable (btnAddReview));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", btnAddReview);
+
+//        wait.until (ExpectedConditions.elementToBeClickable (btnAddReview));
         btnAddReview.click ();
     }
 
@@ -100,6 +103,8 @@ public class productDetail {
         wait.until (ExpectedConditions.elementToBeClickable (btnWishlist));
         btnWishlist.click ();
     }
+
+
 
 }
 
