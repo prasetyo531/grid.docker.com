@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="545bcbc0-9cac-4385-9c4a-b43ab83e63fa" name="Default Changelist" comment="update add review">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/productDetail/addReviewThenEdit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/productDetail/addReviewThenEdit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Register/FirstTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Register/SecondTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/productDetail/addReviewThenEdit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/productDetail/addReviewThenEdit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/addProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/addProduct.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
