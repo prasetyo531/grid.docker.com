@@ -470,10 +470,6 @@ public class categoryList {
     public void HoverClickProduct() {
 
         WebElement wardah = driver.findElement(By.id("id_product_image_12537"));
-
-//        JavascriptExecutor js = (JavascriptExecutor) driver;
-//        js.executeScript("arguments[0].click();", wardah);
-
         wait.until(ExpectedConditions.elementToBeClickable(wardah));
         wardah.click();
 
@@ -484,6 +480,13 @@ public class categoryList {
         WebElement emina = driver.findElement(By.id("id_product_image_18167"));
         wait.until(ExpectedConditions.elementToBeClickable(emina));
         emina.click();
+    }
+
+    public void HoverCLickProduct2() {
+
+        WebElement innisfree = driver.findElement(By.id("id_product_image_26291"));
+        wait.until(ExpectedConditions.elementToBeClickable(innisfree));
+        innisfree.click();
     }
 
 }

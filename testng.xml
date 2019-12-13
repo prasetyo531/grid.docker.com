@@ -4,7 +4,7 @@
     <test name="ProductDetail">
         <parameter name="browser" value="Chrome"/>
         <classes>
-            <class name="productDetail.addReviewThenEdit"/>
+            <class name="productDetail.detailProduct"/>
         </classes>
     </test>
 <!--    <test name="AddProduct">-->
