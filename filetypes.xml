@@ -1,6 +1,7 @@
 <application>
   <component name="FileTypeManager" version="17">
     <extensionMap>
+      <mapping pattern="CreateAccount" type="Cucumber" />
       <mapping pattern="thingThatNotInherited" type="PLAIN_TEXT" />
       <mapping pattern="staticVsNonStatic" type="PLAIN_TEXT" />
       <removed_mapping ext="log" approved="true" type="PLAIN_TEXT" />
