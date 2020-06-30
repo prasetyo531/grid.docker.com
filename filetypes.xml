@@ -4,6 +4,7 @@
       <mapping pattern="CreateAccount" type="Cucumber" />
       <mapping pattern="thingThatNotInherited" type="PLAIN_TEXT" />
       <mapping pattern="staticVsNonStatic" type="PLAIN_TEXT" />
+      <mapping pattern="UpdateProfile.feature" type="PLAIN_TEXT" />
       <mapping pattern="ForgotPassword.feature" type="PLAIN_TEXT" />
       <mapping ext="gspec" type="PLAIN_TEXT" />
       <removed_mapping ext="log" approved="true" type="PLAIN_TEXT" />
