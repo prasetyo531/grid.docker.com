@@ -4,10 +4,12 @@
     <option name="customScope" value="Directory '.../src/c3Polimorphism'" />
     <option name="defaultScopeName" value="Directory '.../src/c3Polimorphism'" />
     <option name="localCaseSensitive" value="true" />
+    <option name="localWholeWordsOnly" value="true" />
     <option name="skipResultsWithOneUsage" value="true" />
     <option name="SKIP_RESULTS_WHEN_ONE_USAGE" value="true" />
     <option name="CASE_SENSITIVE_SEARCH" value="true" />
     <option name="LOCAL_CASE_SENSITIVE_SEARCH" value="true" />
+    <option name="LOCAL_WHOLE_WORDS_ONLY" value="true" />
     <option name="SEARCH_SCOPE" value="Directory '.../src/c3Polimorphism'" />
   </component>
 </application>
