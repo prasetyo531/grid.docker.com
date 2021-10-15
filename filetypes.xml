@@ -3,9 +3,11 @@
     <extensionMap>
       <mapping pattern="sadsad" type="AUTO_DETECTED" />
       <mapping pattern="UpdateProfile.feature" type="Cucumber" />
+      <removed_mapping ext="feature" type="Cucumber" />
       <mapping pattern="ForgotPassword.feature" type="PLAIN_TEXT" />
       <mapping pattern="staticVsNonStatic" type="PLAIN_TEXT" />
       <mapping pattern="thingThatNotInherited" type="PLAIN_TEXT" />
+      <mapping ext="feature" type="PLAIN_TEXT" />
       <mapping ext="gspec" type="PLAIN_TEXT" />
       <removed_mapping ext="bat" approved="true" type="PLAIN_TEXT" />
       <removed_mapping ext="cmd" approved="true" type="PLAIN_TEXT" />
